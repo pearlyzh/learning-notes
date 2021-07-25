@@ -281,7 +281,7 @@
 - Quick-sort:
 	- https://stackoverflow.com/questions/10425506/intuitive-explanation-for-why-quicksort-is-n-log-n
 
-## OS:
+## OS
 - Is a platform
 - Linux
 	- https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/
@@ -330,7 +330,7 @@
 	- Buffer overflow exploits:
 		- https://searchsecurity.techtarget.com/tip/1048483/Buffer-overflow-attacks-How-do-they-work
 
-## Hardware:
+## Hardware
 - CPU
 	- cycles
 	- cores
@@ -343,7 +343,7 @@
 - I/O Device
 - Sequential vs Random IO: https://stackoverflow.com/questions/2100584/difference-between-sequential-write-and-random-write
 
-## Distributed Things: 
+## Distributed Things
  - https://www.youtube.com/watch?v=OKHIdpOAxto&list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB&index=10
 - FAQ:
 	- Should microservices share the same database? https://qr.ae/pGITa3
