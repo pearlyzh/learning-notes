@@ -96,6 +96,8 @@
 		- https://www.quora.com/Distributed-Systems/Why-do-people-need-a-distributed-lock/answer/Sean-Owen?__snids__=52301574
 	- RedLock Algorithm
 ## Language
+- Declararive vs Imperative padigram:
+	- https://stackoverflow.com/a/1784687/6085492
 - Golang:
 	- Naturally non-blocking
 	- Compiled directly to machine code
