@@ -403,6 +403,12 @@
 		- Partitioning proportionally to nodes. Cassandra and Ketama make the number of partitions proportional to the number of nodes. Have a fixed number of partitions per node. This approach also keeps the size of each partition fairly stable.
 	- Request routing:
 		- Many distributed data systems rely on a separate coordination service such as ZooKeeper to keep track of this cluster metadata. Each node registers itself in ZooKeeper, and ZooKeeper maintains the authoritative mapping of partitions to nodes. The routing tier or the partitioning-aware client, can subscribe to this information in ZooKeeper. HBase, SolrCloud and Kafka use ZooKeeper to track partition assignment. MongoDB relies on its own config server. Cassandra and Riak take a different approach: they use a gossip protocol.
+	- Consistent Hashing:
+		- To determine which server a key is stored on, we go clockwise from the key position on the ring until a server is found
+		- With virtual nodes, each server is responsible for multiple partitions
+		- To find which server a key is stored on, we go clockwise from the key’s location and find the
+first virtual node encountered on the ring
+		- As the number of virtual nodes increases, the distribution of keys becomes more balanced. This is because the standard deviation gets smaller with more virtual nodes, leading to balanced data distribution
 - Stateless vs stateful:
 	- Cross-origin resource sharing (CORS): https://www.codecademy.com/articles/what-is-cors
 	- JWT: 
