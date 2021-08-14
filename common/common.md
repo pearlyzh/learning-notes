@@ -285,6 +285,8 @@
 
 ## OS
 - Is a platform
+- Common concepts:
+	- https://towardsdatascience.com/all-you-should-know-about-operating-systems-in-technical-interviews-4dcc55210fea
 - Linux
 	- https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/
 	- cgroups:
@@ -292,6 +294,8 @@
 		- Enable you to limit system resources to defined user groups or processes:
 			- https://linuxhint.com/limit_cpu_usage_process_linux/
 - Component:
+	- Hardware context switching:
+		- The hardware context switching mechanism (called Hardware Task Switching in the CPU manuals) can be used to change all of the CPU's state except for the FPU/MMX and SSE state. To use the hardware mechanism you need to tell the CPU where to save the existing CPU state, and where to load the new CPU state. The CPU state is always stored in a special data structure called a TSS (Task State Segment).
 	- Driver
 	- In Unix, that interface is a file (or, more precisely, a file descriptor). A file is just an ordered sequence of bytes. Because that is such a simple interface, many different things can be represented using the same interface: an actual file on the filesystem, a communication channel to another process
 	- File system:
