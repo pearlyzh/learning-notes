@@ -95,6 +95,8 @@
 		- https://redislabs.com/ebook/part-2-core-concepts/chapter-6-application-components-in-redis/6-2-distributed-locking/
 		- https://www.quora.com/Distributed-Systems/Why-do-people-need-a-distributed-lock/answer/Sean-Owen?__snids__=52301574
 	- RedLock Algorithm
+	- Unsafe at any speed:
+		- https://towardsdatascience.com/redis-unsafe-at-any-speed-f2731f738a25
 ## Language
 - Declararive vs Imperative padigram:
 	- https://stackoverflow.com/a/1784687/6085492
@@ -252,7 +254,8 @@
 	- https://techdifferences.com/difference-between-flow-control-and-congestion-control.html
 	- Congestion control:
 		https://stackoverflow.com/questions/49648017/what-happens-in-tcp-when-the-internal-buffer-fills-up
-	- Flow control
+	- Flow control:
+		https://www.youtube.com/watch?v=794V9oc3ZmI&t=4s
 	- Onion routing:
 		- Torch is an implementation of
 		- Go through many of hops that encrypted-decrypted (and in contrary) data in many layers
