@@ -552,6 +552,7 @@ first virtual node encountered on the ring
 	- https://data-flair.training/blogs/kafka-architecture/
 	- https://medium.com/streamthoughts/apache-kafka-rebalance-protocol-or-the-magic-behind-your-streams-applications-e94baf68e4f2
         - Perfect explanation: https://medium.com/swlh/apache-kafka-in-a-nutshell-5782b01d9ffb
+	- Kafka without Zookeeper - Zookeeper-less Kafka: https://towardsdatascience.com/kafka-no-longer-requires-zookeeper-ebfbf3862104
 - Another perfect one: https://medium.com/better-programming/thorough-introduction-to-apache-kafka-6fbf2989bbc1
 - Container and Orchestration
 	- Docker
