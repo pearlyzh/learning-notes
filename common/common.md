@@ -135,6 +135,9 @@
 				- https://stackoverflow.com/questions/3106452/how-do-servlets-work-instantiation-sessions-shared-variables-and-multithreadi
 			- Design pattern:
 				- https://www.baeldung.com/spring-framework-design-patterns
+				- Memento: 
+					- https://refactoring.guru/design-patterns/memento
+					- https://www.baeldung.com/java-memento-design-pattern
 	- Finalize
 		- https://www.geeksforgeeks.org/g-fact-24-finalfinally-and-finalize-in-java/
 	- JMX
@@ -551,8 +554,10 @@ first virtual node encountered on the ring
 	- Compare with RabbitMQ: https://betterprogramming.pub/rabbitmq-vs-kafka-1779b5b70c41
 	- https://data-flair.training/blogs/kafka-architecture/
 	- https://medium.com/streamthoughts/apache-kafka-rebalance-protocol-or-the-magic-behind-your-streams-applications-e94baf68e4f2
-        - Perfect explanation: https://medium.com/swlh/apache-kafka-in-a-nutshell-5782b01d9ffb
+	- Perfect explanation: https://medium.com/swlh/apache-kafka-in-a-nutshell-5782b01d9ffb
 	- Kafka without Zookeeper - Zookeeper-less Kafka: https://towardsdatascience.com/kafka-no-longer-requires-zookeeper-ebfbf3862104
+	- Very short and handy explanations: https://sagarkudu.medium.com/
+	- Kafka storage internals: https://rohithsankepally.github.io/Kafka-Storage-Internals/
 - Another perfect one: https://medium.com/better-programming/thorough-introduction-to-apache-kafka-6fbf2989bbc1
 - Container and Orchestration
 	- Docker
@@ -587,3 +592,4 @@ first virtual node encountered on the ring
 	- We tend to violate monolith architecture by no respecting the modules. Breaking them into services makes it harder to do so
 	- A lot of the complexity of breaking complex systems lies tha data. After extracting the microservice you need to understand what part of the old database this system uses.
 	- There has to be a willingness to change as an organization if you want to make the most out of using microservices
+	- https://blog.pragmaticengineer.com/distributed-architecture-concepts-i-have-learned-while-building-payments-systems/
