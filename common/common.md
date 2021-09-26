@@ -350,7 +350,8 @@
 - Sequential vs Random IO: https://stackoverflow.com/questions/2100584/difference-between-sequential-write-and-random-write
 
 ## Distributed Things
- - https://www.youtube.com/watch?v=OKHIdpOAxto&list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB&index=10
+ - Generating an increamental global unique Id: https://edward-huang.com/distributed-system/programming/architecture/system-thinking/2021/01/07/how-do-you-generate-an-incremental-global-unique-in-a-distributed-system/
+ - Lectures for Distributed system: https://www.youtube.com/watch?v=OKHIdpOAxto&list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB&index=10
 - FAQ:
 	- Should microservices share the same database? https://qr.ae/pGITa3
 - Byzantine Problem:
