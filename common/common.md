@@ -58,6 +58,8 @@
 		- https://dba.stackexchange.com/questions/204561/does-mysql-use-b-tree-btree-or-both
 		- Branching factor: The number of references to child pages in one page of the B-tree
 		- Preferable in many relational databases, transaction isolation is implemented using locks on ranges of keys, and in a B-tree index, those locks can be directly attached to the tree
+		- This structure mimics the underlying hardware: Disks are also arranged in terms of blocks.
+		- https://betterprogramming.pub/become-a-database-expert-by-knowing-the-pros-and-cons-of-lsm-tree-and-b-tree-engines-bbc7e24f040c
 	- Internals:
 		- https://dev.mysql.com/doc/internals/en/optimizer-primary-optimizations.html
 - Cassandra:
@@ -76,12 +78,14 @@
 	- Acts as a signpost and helps you to locate the data you want.
 		- Hash Indexes
 		- Log-structured Indexes
-	- LSM-Trees
+	- LSM-Trees:
 		- SS-Table: we require that the sequence of key-value pairs is sorted by key.
 			- Merging segments: The approach is like the one used in the merge-sort algorithm.
 			- Still need an in-memory index to tell you the offsets for some of the keys, but it can be sparse: one key for every few kilobytes of segment file is sufficient, because a few kilobytes can be scanned very quickly
 			- Constructing:
 				- When a write comes in, add it to an in-memory balanced tree data structure (for example, a red-black tree). This in-memory tree is sometimes called a mem-table.
+		- https://yetanotherdevblog.com/lsm/
+		- Compaction: https://docs.datastax.com/en/cassandra-oss/2.1/cassandra/dml/dml_write_path_c.html#:~:text=the%20write%20path.-,Cassandra%20processes%20data%20at%20several%20stages%20on%20the%20write%20path,Flushing%20data%20from%20the%20memtable
 	- Log-structured storage engine:
 		- Are a comparatively recent development. Their key idea is that they systematically turn random-access writes into sequential writes on disk, which enables higher write throughput due to the performance characteristics of hard drives and SSDs
 - OLTP:
@@ -100,20 +104,10 @@
 ## Language
 - Declararive vs Imperative padigram:
 	- https://stackoverflow.com/a/1784687/6085492
-- Golang:
-	- Naturally non-blocking
-	- Compiled directly to machine code
-	- M:N Scheduling Model
-	- Is a divergence language 
-	- https://medium.com/@riteeksrivastava/a-complete-journey-with-goroutines-8472630c7f5c
-	- https://www.ardanlabs.com/blog/2018/08/scheduling-in-go-part1.html
-	- https://www.ardanlabs.com/blog/2018/08/scheduling-in-go-part2.html
-	- https://rakyll.org/scheduler/
-	- Golang goroutines vs green thread:
-		https://softwareengineering.stackexchange.com/questions/222642/are-go-langs-goroutine-pools-just-green-threads
 - Java:
 	- JVM:
 		- https://ajay-yadav109458.medium.com/jvm-overview-21458b81ac4
+		- https://sahiladhav16.medium.com/understanding-jvm-architecture-cc3fcee39b9a
 	- Docs:
 		- http://web.mit.edu/6.005/www/fa15/
 	- Gargabe Collector:
@@ -425,11 +419,15 @@ first virtual node encountered on the ring
 		- bearer authentication (token authentication) is an open standard
 		- https://jwt.io/introduction/
 	- Oauth2:
-		+ Used to grant authorizations for 3rd parties application, allow them to have some roles to interact with your own resources of a domain, through the tokens
+		+ Used to grant authorizations for 3rd parties application, allow them to have some roles to interact with your own resources of a domgain, through the tokens
 - Visualization: http://thesecretlivesofdata.com/raft/
 - CAP: 
-	http://martin.kleppmann.com/2015/05/11/please-stop-calling-databases-cp-or-ap.html
-	https://www.repository.cam.ac.uk/bitstream/handle/1810/267054/1509.05393v2.pdf?sequence=1&isAllowed=y
+	- http://martin.kleppmann.com/2015/05/11/please-stop-calling-databases-cp-or-ap.html
+	- https://www.repository.cam.ac.uk/bitstream/handle/1810/267054/1509.05393v2.pdf?sequence=1&isAllowed=y
+	- https://www.the-paper-trail.org/page/cap-faq/
+- RUM conjecture:
+	- The RUM Conjecture states that we cannot design an access method for a storage system that is optimal in all the following three aspects - Reads, Updates, and, Memory
+	- https://www.codementor.io/@arpitbhayani/the-rum-conjecture-16z2ckqte9
 - CRDT: https://www.figma.com/blog/how-figmas-multiplayer-technology-works/?fbclid=IwAR3_bKwHI4-iY8T-iVSjlU3wQIxv0K7uRW2FaJkVcve6HsHjQrL91RB8DSI
 - The log: https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying
 - Idempotent and Deterministic: 
@@ -577,6 +575,8 @@ first virtual node encountered on the ring
 - Trade off: https://martinfowler.com/articles/microservice-trade-offs.html
 - Mistakes:
 	- https://towardsdatascience.com/10-things-youre-doing-wrong-in-java-7608e2f050c7
+- Interview:
+	- https://betterprogramming.pub/an-interview-question-that-truly-tests-your-experience-as-a-software-engineer-e188efa4e5b6
 - Micro-services:
 	- https://www.youtube.com/watch?v=GBTdnfD6s5Q
 	- https://medium.com/swlh/stop-this-microservices-madness-8e4e0695805b
