@@ -1,4 +1,4 @@
-# Common notes
+# Common
 ## Experience
 - Twitter at scale: https://blog.twitter.com/engineering/en_us/topics/infrastructure/2017/the-infrastructure-behind-twitter-scale.html
 - Hypothetic:
@@ -61,7 +61,9 @@
 		- This structure mimics the underlying hardware: Disks are also arranged in terms of blocks.
 		- https://betterprogramming.pub/become-a-database-expert-by-knowing-the-pros-and-cons-of-lsm-tree-and-b-tree-engines-bbc7e24f040c
 	- Internals:
-		- https://dev.mysql.com/doc/internals/en/optimizer-primary-optimizations.html
+		- Optimizer:
+			- https://dev.mysql.com/doc/internals/en/optimizer-primary-optimizations.html
+			- https://www.informit.com/articles/article.aspx?p=377652&seqNum=2
 - Cassandra:
 	- Is Column family, not column oriented:
 		- https://stackoverflow.com/questions/13010225/why-many-refer-to-cassandra-as-a-column-oriented-database
@@ -195,10 +197,11 @@
 	- Flow of control:
 		- https://www.brianstorti.com/tcp-flow-control/#:~:text=TCP%20's%20flow%20control%20is,data%20than%20it%20can%20handle%3B&text=It%20will%20then%20periodically%20send,size%2C%20it%20resumes%20the%20transmission.
  - HTTP/1.1 - HTTP/2 - HTTP/3:
+	- How HTTP/2 works: https://sookocheff.com/post/networking/how-does-http-2-work/
 	- Visualization:
 		https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/
-	- HTTP Head of line blocking
-	- TCP Head of line blocking
+	- HTTP Head of line blocking: https://stackoverflow.com/questions/45583861/how-does-http2-solve-head-of-line-blocking-hol-issue
+	- TCP Head of line blocking: https://http3-explained.haxx.se/en/why-quic/why-tcphol
 	- QUIC
 - Encapsulation:
 	- https://searchnetworking.techtarget.com/answer/How-are-TCP-IP-and-HTTP-related
@@ -256,32 +259,6 @@
 	- Onion routing:
 		- Torch is an implementation of
 		- Go through many of hops that encrypted-decrypted (and in contrary) data in many layers
-
-## Data Structure
-- Graph theory:
-	- BFS vs DFS: https://stackoverflow.com/questions/3332947/when-is-it-practical-to-use-depth-first-search-dfs-vs-breadth-first-search-bf
-	- 
-- Probabilistic:
-	- Hyperloglog
-	- Count min sketch
-	- Bloom filter
-- Disruptor
-	- Ring buffer
-- Data storage:
-	- https://medium.com/databasss/on-disk-io-part-3-lsm-trees-8b2da218496f
-
-- Tree:
-	- Traversal:
-		- In-order: Left - Root- Right
-		- Pre-order: Root - Left - Right
-		- Post-order: Left - Right - Root
-
-## Algorithm
-- Big O:
-	- Common runtimes example: https://www.bigocheatsheet.com/
-	- In plain English: https://stackoverflow.com/questions/487258/what-is-a-plain-english-explanation-of-big-o-notation
-- Quick-sort:
-	- https://stackoverflow.com/questions/10425506/intuitive-explanation-for-why-quicksort-is-n-log-n
 
 ## OS
 - Is a platform
@@ -472,6 +449,7 @@ first virtual node encountered on the ring
 	- Architecture: https://www.google.com/search?q=state+machine+replication&safe=active&sxsrf=ACYBGNTwIx2ukCcZS90sp1iu_kRmdYLoCQ:1579443308842&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjt6Pbq7I_nAhWF7nMBHUTMBXAQ_AUoAXoECBAQAw&biw=1440&bih=724#imgrc=_DNfSp4Zs1WPNM:
 - Flow of control: https://www.youtube.com/watch?v=EEEGBwEA8yA
 - Distributed transaction:
+	- Patterns: https://developers.redhat.com/articles/2021/09/21/distributed-transaction-patterns-microservices-compared?utm_campaign=Grokking%20Newsletter&utm_medium=email&utm_source=Revue%20newsletter#
 	- SEATA:
 		- https://github.com/seata/seata
 - Synchronous Versus Asynchronous Networks:
@@ -559,7 +537,9 @@ first virtual node encountered on the ring
 	- Kafka storage internals: https://rohithsankepally.github.io/Kafka-Storage-Internals/
 - Another perfect one: https://medium.com/better-programming/thorough-introduction-to-apache-kafka-6fbf2989bbc1
 - Container and Orchestration
-	- Docker
+	- Docker:
+		- Since all Linux distributions run the same (yup, it's a bit simplified) Linux kernel and differ only in userland software, it's pretty easy to simulate a different distribution environment - by just installing that userland software and pretending it's another distribution. Being specific, installing CentOS container inside Ubuntu OS will mean that you will get the userland from CentOS, while still running the same kernel, not even another kernel instance. https://serverfault.com/a/755616
+		- Layering: https://stackoverflow.com/a/33836848/6085492
 	- K8S:
 		- https://thenewstack.io/how-do-applications-run-on-kubernetes/
 - Jenkins CI/CD
@@ -578,7 +558,27 @@ first virtual node encountered on the ring
 	- https://towardsdatascience.com/10-things-youre-doing-wrong-in-java-7608e2f050c7
 - Interview:
 	- https://betterprogramming.pub/an-interview-question-that-truly-tests-your-experience-as-a-software-engineer-e188efa4e5b6
+- System Design: https://github.com/donnemartin/system-design-primer#load-balancer-vs-reverse-proxy
 - Micro-services:
+	- https://www.martinfowler.com/articles/microservices.html
+		- Componentization via Services (Services over Libraries)
+		- Organized around Business Capabilities. Conway's law: Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure.
+		- Products not Projects: A common inspiration for this is Amazon's notion of "you build, you run it"
+		- Smart endpoints and dumb pipes: Applications built from microservices aim to be as decoupled and as cohesive as possible - they own their own domain logic and act more as filters in the classical Unix sense - receiving a request, applying logic as appropriate and producing a response
+		- Decentralized Governance: You want to use Node.js to standup a simple reports page? Go for it. C++ for a particularly gnarly near-real-time component? Fine...
+		- Decentralized Data Management: Using transactions like this helps with consistency, but imposes significant temporal coupling, which is problematic across multiple services. Distributed transactions are notoriously difficult to implement and as a consequence microservice architectures emphasize transactionless coordination between services
+		- Infrastructure Automation
+		- Design for failure
+		- Evolutionary Design: The monolith still is the core of the website, but they prefer to add new features by building microservices that use the monolith's API. This approach is particularly handy for features that are inherently temporary, such as specialized pages to handle a sporting event. Such a part of the website can quickly be put together using rapid development languages, and removed once the event is over
+	- Lessons:
+		- https://yigitdarcin.com/6-lessons-learned-from-microservices-architecture-failures-8c9dd51c3c5e
+			- Data ownership: Beware of how to split the data, extensively think about ownership, think of data change events, work deeply on event driven architecture, use thin/fat event based on your scenario, think about race conditions.
+			- Sync vs Async communication
+			- Project Planning including multiple teams
+			- Check & Monitor permissions, network or things other than code
+			- Resilient & Robust BFFs & APIs: As there was one BFF for all deep backend api interactions and as we didn’t separate each deep backend api requests thread pools, all threads were busy trying to get response from that specific backend api, BFF became unable to response to even health check requests, thus failed and restarting. Whole APP started crashing or popping up error messages.
+			- Test for every single goddamn thing: 
+
 	- https://www.youtube.com/watch?v=GBTdnfD6s5Q
 	- https://medium.com/swlh/stop-this-microservices-madness-8e4e0695805b
 	- Use this as a means to obtain a disired outcome rather than for the sake of using a new technology
