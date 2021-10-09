@@ -1,3 +1,5 @@
+# Go
+
 ## Characteristics
 - Naturally non-blocking
 - Compiled directly to machine code
