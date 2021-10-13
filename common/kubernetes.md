@@ -59,10 +59,10 @@ and management for both development and the operations teams.
         - *Kubelet*, which talks to the API server and manages containers on its node
         - *Kubernetes Service Proxy* (kube-proxy), which load-balances network traffic between application components
 
-## Core concepts
-### Pods
- - Why multiple containers are better than one container running
-Multiple processes?
+# Core concepts
+## Pods
+ - Pods represent the basic deployable unit in Kubernetes, and the basic unit of scaling.
+ - Why multiple containers are better than one container running Multiple processes?
     - If you run multiple unrelated processes in a single container, it is your responsibility to keep all those processes running, manage their logs, and so on. For example, you’d have to include a mechanism for automatically restarting individual processes if they crash. 
     - Also, all those processes would log to the same standard output, so you’d have a hard time figuring out what process logged what.
  - The flat inter-pod network
@@ -71,4 +71,52 @@ Multiple processes?
     - Like a computer on a LAN, each pod gets its own IP address and is accessible from all other pods through this network established specifically for pods.
 - Splitting multi-tier apps into multiple pods
     - Splitting into multiple pods to enable individual scaling
-    - The main reason to put multiple containers into a single pod is when the application consists of one main process and one or more complementary processes,
+    - The main reason to put multiple containers into a single pod is when the application consists of one main process and one or more complementary processes
+- Deciding when to use multiple containers in a pod
+    - Do they need to be run together or can they run on different hosts?
+    - Do they represent a single whole or are they independent components?
+    - Must they be scaled together or individually?
+### Organizing pods with labels
+- Labels are a simple, yet incredibly powerful, Kubernetes feature for organizing not
+only pods, but all other Kubernetes resources.
+- A label is an arbitrary key-value pair you attach to a resource, which is then utilized when selecting resources using label selectors
+- A resource can have more than one label, as long as the keys of those labels are
+unique within that resource.
+- Label selectors aren’t useful only for listing pods, but also for performing actions on a subset of all pods. Benefits:
+    - Using labels for categorizing worker nodes
+    - Scheduling pods to specific nodes
+    - Scheduling to one specific node
+### Annotating pods
+- Annotations are also key-value pairs, so in essence, they’re similar to labels, but they aren’t meant to hold identifying information.
+- Annotations allow attaching larger blobs of data to pods either by people or
+tools and libraries.
+
+### Using namespaces to group resources
+- Using multiple namespaces allows you to split complex systems with numerous components into smaller distinct groups.
+- Namespaces can be used to allow different teams to use the same cluster as
+though they were using separate Kubernetes clusters.
+- How to use the kubectl explain command to quickly look up the information
+on any Kubernetes resource.
+
+## Replication and other controllers: deploying managed pods
+### Liveness probes
+- You can specify a liveness probe for each container in the pod’s specification. Kubernetes will periodically
+execute the probe and restart the container if the probe fails.
+    - An HTTP GET probe performs an HTTP GET request on the container’s IP address, a port and path you specify
+    - A TCP Socket probe tries to open a TCP connection to the specified port of the container
+    - An Exec probe executes an arbitrary command inside the container and checks the command’s exit status code
+
+### Replication Controllers
+- A ReplicationController is a Kubernetes resource that ensures its pods are always
+kept running
+- A ReplicationController’s job is to make sure that an exact number of pods always
+matches its label selector. If it doesn’t, the ReplicationController takes the appropriate action to reconcile the actual with the desired number
+- 3 Parts:
+    - A label selector, which determines what pods are in the ReplicationController’s scope
+    - A replica count, which specifies the desired number of pods that should be running
+    - A pod template, which is used when creating new pod replicas
+- Benefits:
+    - It makes sure a pod (or multiple pod replicas) is always running by starting a new pod when an existing one goes missing.
+    - When a cluster node fails, it creates replacement replicas for all the pods that were running on the failed node (those that were under the Replication- Controller’s control).
+    - It enables easy horizontal scaling of pods—both manual and automatic (see horizontal pod auto-scaling in chapter 15).
+#### Horizontally scaling pods
