@@ -119,4 +119,6 @@ matches its label selector. If it doesn’t, the ReplicationController takes the
     - It makes sure a pod (or multiple pod replicas) is always running by starting a new pod when an existing one goes missing.
     - When a cluster node fails, it creates replacement replicas for all the pods that were running on the failed node (those that were under the Replication- Controller’s control).
     - It enables easy horizontal scaling of pods—both manual and automatic (see horizontal pod auto-scaling in chapter 15).
+- Changing the pod template
+    - Changing the pod template is like replacing a cookie cutter with another one. It will only affect the cookies you cut out afterward and will have no effect on the ones you’ve already cut.
 #### Horizontally scaling pods
