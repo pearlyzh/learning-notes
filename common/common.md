@@ -235,6 +235,8 @@
 		- AMQ
 		- 0MQ
 		- RabbitMQ
+- Bidirectional Communication:
+	- SSE vs WebSocket: https://stackoverflow.com/a/5326159/6085492
 
 ## Mechanism
 - Consistent Hashing:
