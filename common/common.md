@@ -21,6 +21,13 @@
 			- Simplicity
 			- Evolvability
 		- Resiliency is the ability of a system to gracefully handle the failures and recover from failures as soon as it can
+- Double entry vs single entry:
+	-  For every debit there is a corresponding credit for an equal amount of money and for every credit there is a corresponding debit for an equal amount of money
+	- Benefit:
+		- Recording method: Single-entry bookkeeping gives a one-sided picture of transactions recorded in the cash register. In double entry, changes due to one transaction are reflected in at least two accounts. The double-entry system is preferred by investors, banks and buyers because it gives them a more complete financial picture of an organization.
+		- Error detection: In double entry, debits and credits must always be the same. If that is not the case, then there is an error. This makes it easy to spot errors and ensure that they are not carried forward to other journals and financial statements. In single entry, there is no method for error correction or detection.
+		- Company size: The single-entry system is only appropriate for small enterprises, whereas the double-entry system can be used by all sizes of businesses, including large ones.
+		- Preparation of financial statements: The information recorded in a single-entry system isn’t adequate for financial reporting or preparing profit and loss statements. Bigger organizations rely on these reports to track their performance, so they need the extra information captured by double-entry accounting.
 
 ## Database
 - Transaction:
