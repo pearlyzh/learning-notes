@@ -13,15 +13,15 @@ other, similarly to VMs, but with much less overhead.
 - Containers, on the other hand, all perform system calls on the exact same kernel running in the host OS. This single kernel is the only one performing x86 instructions on the host’s CPU.
 - How about security, because containers all call out to the same kernel, and resource isolated as well?
     - Two mechanisms make this possible:
-        - The first one, Linux Namespaces, makes sure each process sees its own personal view ofthe system (files, processes, network interfaces, hostname, and so on). 
-        - The second one is Linux Control Groups (cgroups), which limit the amount of resources the process can consume (CPU, memory, network bandwidth, and so on).
+        - The first one, Linux Namespaces, makes sure each process sees its own personal view of the system (files, processes, network interfaces, hostname, and so on). 
+        - The second one is Linux Control Groups (**cgroups**), which limit the amount of resources the process can consume (CPU, memory, network bandwidth, and so on).
 ### Isolate Resource with Linux Namespace
 - By default, each Linux system initially has one single namespace. 
-- All system resources, such as filesystems, process IDs, user IDs, network interfaces, and others, belong to the single namespace.
-- We can create additional namespaces and organize resources across them. When running a process, you run it inside one of those namespaces. The process will only see resources that are inside the same namespace.
+- All system resources, such as **filesystems**, process IDs, user IDs, network interfaces, and others, belong to the single namespace.
+- We can create additional namespaces and organize resources across them. When running a process, you run it inside one of those namespaces. The process will only see resources that are inside the same names pace.
 - Each namespace kind is used to isolate a certain group of resources (Mount, Process ID, Network, Inter-process communication, UTS, User ID)
 - Limit resources:
-    - This is achieved with cgroups, a Linux kernel feature that limits the resource usage of a process (or a group of processes).
+    - This is achieved with **cgroups**, a Linux kernel feature that limits the resource usage of a process (or a group of processes).
     - A process
 can’t use more than the configured amount of CPU, memory, network bandwidth
 
@@ -107,10 +107,9 @@ execute the probe and restart the container if the probe fails.
     - An Exec probe executes an arbitrary command inside the container and checks the command’s exit status code
 
 ### Replication Controllers
-- A ReplicationController is a Kubernetes resource that ensures its pods are always
-kept running
-- A ReplicationController’s job is to make sure that an exact number of pods always
-matches its label selector. If it doesn’t, the ReplicationController takes the appropriate action to reconcile the actual with the desired number
+- ReplicationControllers were the only Kubernetes component for replicating
+pods and rescheduling them when nodes failed. It is a Kubernetes resource that ensures its pods are always kept running
+- A ReplicationController’s job is to make sure that an exact number of pods always matches its label selector. If it doesn’t, the ReplicationController takes the appropriate action to reconcile the actual with the desired number
 - 3 Parts:
     - A label selector, which determines what pods are in the ReplicationController’s scope
     - A replica count, which specifies the desired number of pods that should be running
@@ -122,3 +121,5 @@ matches its label selector. If it doesn’t, the ReplicationController takes the
 - Changing the pod template
     - Changing the pod template is like replacing a cookie cutter with another one. It will only affect the cookies you cut out afterward and will have no effect on the ones you’ve already cut.
 #### Horizontally scaling pods
+- Declarative approach
+    - "I want to have x number of instances running." You’re not telling Kubernetes what or how to do it. You’re just specifying the desired state.
