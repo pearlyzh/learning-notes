@@ -106,7 +106,7 @@ execute the probe and restart the container if the probe fails.
     - A TCP Socket probe tries to open a TCP connection to the specified port of the container
     - An Exec probe executes an arbitrary command inside the container and checks the command’s exit status code
 
-### Replication Controllers
+### Replication Controllers (to be deprecated)
 - ReplicationControllers were the only Kubernetes component for replicating
 pods and rescheduling them when nodes failed. It is a Kubernetes resource that ensures its pods are always kept running
 - A ReplicationController’s job is to make sure that an exact number of pods always matches its label selector. If it doesn’t, the ReplicationController takes the appropriate action to reconcile the actual with the desired number
@@ -123,3 +123,10 @@ pods and rescheduling them when nodes failed. It is a Kubernetes resource that e
 #### Horizontally scaling pods
 - Declarative approach
     - "I want to have x number of instances running." You’re not telling Kubernetes what or how to do it. You’re just specifying the desired state.
+
+### Replica Sets
+- It’s a n**ew generation of ReplicationController** and replaces it completely (ReplicationControllers will eventually be deprecated).
+- A ReplicaSet **behaves exactly like** a ReplicationController, but it has **more expressive pod selectors**.
+- Whereas a ReplicationController’s label selector only allows matching
+pods that include a certain label, ReplicaSet’s selector also allows matching pods that lack a certain label or pods that include a certain label key, regardless of its value.
+- 
