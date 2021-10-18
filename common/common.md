@@ -34,7 +34,7 @@
 	- ACID
 		- Atomicity:
 			- If the writes are grouped together into an atomic transaction, and the transaction cannot be completed (committed) due to a fault, then the transaction is aborted and the database must discard or undo any writes it has made so far in that transaction
-		- In the context of ACID, consistency refers to an application-specific notion of the database being in a “good state.”
+		- In the context of ACID, consistency refers to an application-specific notion of the database being in a “good state."
 		- Isolation Level:
 			- https://medium.com/@huynhquangthao/mysql-testing-isolation-levels-650a0d0fae75
 			- Transaction isolation is primarily about avoiding race conditions due to concurrently executing transactions
