@@ -98,7 +98,7 @@ though they were using separate Kubernetes clusters.
 - How to use the kubectl explain command to quickly look up the information
 on any Kubernetes resource.
 
-## Replication and other controllers: deploying managed pods
+## Replication and other controllers, deploying and managed pods
 ### Liveness probes
 - You can specify a liveness probe for each container in the pod’s specification. Kubernetes will periodically
 execute the probe and restart the container if the probe fails.
@@ -129,4 +129,31 @@ pods and rescheduling them when nodes failed. It is a Kubernetes resource that e
 - A ReplicaSet **behaves exactly like** a ReplicationController, but it has **more expressive pod selectors**.
 - Whereas a ReplicationController’s label selector only allows matching
 pods that include a certain label, ReplicaSet’s selector also allows matching pods that lack a certain label or pods that include a certain label key, regardless of its value.
-- 
+
+### Daemon Sets
+- A DaemonSet makes sure it creates as many pods as there are nodes and deploys
+each one on its own node.
+- A DaemonSet makes sure it creates as many pods as there are nodes and deploys
+each one on its own node.
+
+### Job resources
+- You’ll have cases where you only want to run a task that terminates after completing its work.
+- ReplicationControllers, ReplicaSets, and DaemonSets run continuous tasks that are never considered completed. Processes in such pods are restarted when they exit. But in a completable task, after its process terminates, it should not be restarted again.
+
+
+### Cron jobs
+- At the configured time, Kubernetes will create a Job resource according to the Job template configured in the CronJob object
+
+### Take away for Replication and other controllers
+- You can specify a liveness probe to have Kubernetes restart your container as
+soon as it’s no longer healthy (where the app defines what’s considered
+healthy).
+- Pods shouldn’t be created directly, because they will not be re-created if they’re deleted by mistake, if the node they’re running on fails, or if they’re evicted from the node.
+- ReplicationControllers always keep the desired number of pod replicas
+running.
+- Scaling pods horizontally is as easy as changing the desired replica count on a ReplicationController.
+- Pods aren’t owned by the ReplicationControllers and can be moved between
+them if necessary.
+- A ReplicationController creates new pods from a pod template. Changing the
+template has no effect on existing pods.
+
