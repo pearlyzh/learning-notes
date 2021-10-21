@@ -18,3 +18,6 @@ Blog
 - Designing Schemaless on top of MySQL: https://eng.uber.com/schemaless-part-one-mysql-datastore/
 - Twemproxy: https://blog.twitter.com/developer/en_us/a/2012/twemproxy
 - Centralize proxy for distributed Redis: chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/viewer.html?pdfurl=https%3A%2F%2Fvngms.sharepoint.com%2Fsites%2FExperimentsBetterPracticeSharing%2FShared%2520Documents%2FProposals%2FStorage%2520cache%2520-%2520Redis.pdf&clen=1623293&chunk=true
+
+- Spring Transaction propagations
+- Double entry vs Single entry principle
