@@ -25,3 +25,8 @@ between two or more parties
 - There is no need for a trusted intermediary such as banks, brokers, or other escrow services to serve as a trusted third party.
 - It is a shared, decentralized, and open ledger of transactions. This ledger database is replicated across a large number of nodes.
 - Just the way TCP/IP was designed to achieve an open system, blockchain technology was designed to enable true decentralization. In an effort to do so, the creators of Bitcoin open-sourced it so it could inspire many decentralized applications.
+- Every node on the blockchain network has an identical copy of the
+blockchain. The other part of a block is the "body content" that has a
+validated list of transactions, their amounts, the addresses of the parties
+involved, and some more details. So, given the latest block, it is feasible to
+access all the previous blocks in a blockchain
