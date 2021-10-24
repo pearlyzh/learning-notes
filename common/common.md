@@ -19,7 +19,7 @@
 			- In essence it’s about making life better for the engineering and operations teams who need to work with the system.
 			- Operability
 			- Simplicity
-			- Evolvability
+			- Evolvability	
 		- Resiliency is the ability of a system to gracefully handle the failures and recover from failures as soon as it can
 - Double entry vs single entry:
 	-  For every debit there is a corresponding credit for an equal amount of money and for every credit there is a corresponding debit for an equal amount of money
@@ -34,7 +34,7 @@
 	- ACID
 		- Atomicity:
 			- If the writes are grouped together into an atomic transaction, and the transaction cannot be completed (committed) due to a fault, then the transaction is aborted and the database must discard or undo any writes it has made so far in that transaction
-		- In the context of ACID, consistency refers to an application-specific notion of the database being in a “good state."
+		- In the context of ACID, consistency refers to an application-specific notion of the database being in a "good state."
 		- Isolation Level:
 			- https://medium.com/@huynhquangthao/mysql-testing-isolation-levels-650a0d0fae75
 			- Transaction isolation is primarily about avoiding race conditions due to concurrently executing transactions
