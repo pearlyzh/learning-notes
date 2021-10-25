@@ -139,3 +139,26 @@ hash function. It belongs to the message digest (MD) family
 - Another such hash function family is the Secure Hash Algorithm
 (SHA) family. There are basically four algorithms in this family, such as
 SHA-0, SHA-1, SHA-2, and SHA-3
+
+### Asymmetric key cryptography
+- Also known as "public key cryptography," is a revolutionary concept introduced by Diffie and Hellman. With this technique, they solved the problem of key distribution in a symmetric cryptography system by introducing digital signatures.
+    - **c = E[PukBob, *E(PrkAlice, m)*]**
+    - **m = D[PukAlice, *D(PrkBob, c)*]**
+#### RSA
+- RSA algorithm, named after Ron Rivest, Adi Shamir, and Leonard Adleman
+is possibly one of the most widely used cryptographic algorithms. It was the foundation to generate asymmetric keys.
+
+#### Digital Signature Algorithm (DSA)
+- The DSA was designed by the NSA as part of the Digital Signature Standard
+(DSS) and standardized by the NIST.
+- A typical DSA scheme consists of three algorithms: (1) key generation,
+(3) signature generation, and (3) signature verification.
+- Achieve:
+    - Authenticity: Signed by private key and verified by
+    public key
+    - Data integrity: Hashes will not match if the data is
+    altered.
+    - Non-repudiation: Since the sender signed it, they
+    cannot deny later that they did not send the message.
+
+#### Elliptic Curve Cryptography
