@@ -163,3 +163,19 @@ is possibly one of the most widely used cryptographic algorithms. It was the fou
 
 #### Elliptic Curve Cryptography
 Wow this is amazing!
+- https://www.youtube.com/watch?v=dCvB-mhkT0w
+- Computerphile: https://www.youtube.com/watch?v=NF1pwjL9-DE
+
+### Diffie-Hellman Key Exchange
+- Computerphile: https://www.youtube.com/watch?v=NmM9HA2MQGI
+
+### Symmetric vs. Asymmetric Key Cryptography
+| Symmetric Key Cryptography     |  Asymmetric Key Cryptography |
+| -------------------------------| -----------------------------|
+| Is quite compute-intensive because the length of the keys is usually large. Hence, the process of encryption and decryption is slower|On the contrary, symmetric encryption is faster.
+| Is appropriate for long messages because the speed of encryption/decryption is fast| Is appropriate for short messages, and the speed of encryption/ decryption is slow.|
+Symbols in plaintext and ciphertext are permuted or substituted|Plaintext and ciphertext are treated as integers|
+|Is used for encryption and decryption.|Is used to share and agree upon the key used in encryption|
+|Costs a large number of keys required among a group of nodes to communicate with each other. This problem of finding the keys needed can be approached as a complete graph problem with order 100. Like each vertex requires 99 connected edges to connect with everyone, every participant would need 99 keys to establish secured connections with all other nodes|Every party has its own private key and its public key|
+
+## Game Theory
