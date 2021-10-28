@@ -179,3 +179,4 @@ Symbols in plaintext and ciphertext are permuted or substituted|Plaintext and ci
 |Costs a large number of keys required among a group of nodes to communicate with each other. This problem of finding the keys needed can be approached as a complete graph problem with order 100. Like each vertex requires 99 connected edges to connect with everyone, every participant would need 99 keys to establish secured connections with all other nodes|Every party has its own private key and its public key|
 
 ## Game Theory
+Nash Equilibrium
