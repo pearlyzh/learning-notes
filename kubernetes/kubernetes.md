@@ -2,14 +2,11 @@
 
 ## DevOps and NoOps
 - Ideally, you want the developers to deploy applications themselves without knowing
-anything about the hardware infrastructure and without dealing with the ops
-team. This is referred to as NoOps
+anything about the hardware infrastructure and without dealing with the ops team. This is referred to as NoOps
 
 ## Containers
 ### Linux Container technologies
-- Linux allows you to run multiple services on the same host machine, while not only
-exposing a different environment to each of them, but also isolating them from each
-other, similarly to VMs, but with much less overhead.
+- Linux allows you to run multiple services on the same host machine, while not only exposing a different environment to each of them, but also isolating them from each other, similarly to VMs, but with much less overhead.
 - Containers, on the other hand, all perform system calls on the exact same kernel running in the host OS. This single kernel is the only one performing x86 instructions on the host’s CPU.
 - How about security, because containers all call out to the same kernel, and resource isolated as well?
     - Two mechanisms make this possible:
