@@ -90,10 +90,8 @@ tools and libraries.
 
 ### Using namespaces to group resources
 - Using multiple namespaces allows you to split complex systems with numerous components into smaller distinct groups.
-- Namespaces can be used to allow different teams to use the same cluster as
-though they were using separate Kubernetes clusters.
-- How to use the kubectl explain command to quickly look up the information
-on any Kubernetes resource.
+- Namespaces can be used to allow different teams to use the same cluster as though they were using separate Kubernetes clusters.
+- How to use the kubectl explain command to quickly look up the information on any Kubernetes resource.
 
 ## Replication and other controllers, deploying and managed pods
 ### Liveness probes
@@ -124,14 +122,10 @@ pods and rescheduling them when nodes failed. It is a Kubernetes resource that e
 ### Replica Sets
 - It’s a n**ew generation of ReplicationController** and replaces it completely (ReplicationControllers will eventually be deprecated).
 - A ReplicaSet **behaves exactly like** a ReplicationController, but it has **more expressive pod selectors**.
-- Whereas a ReplicationController’s label selector only allows matching
-pods that include a certain label, ReplicaSet’s selector also allows matching pods that lack a certain label or pods that include a certain label key, regardless of its value.
+- Whereas a ReplicationController’s label selector only allows matching pods that include a certain label, ReplicaSet’s selector also allows matching pods that lack a certain label or pods that include a certain label key, regardless of its value.
 
 ### Daemon Sets
-- A DaemonSet makes sure it creates as many pods as there are nodes and deploys
-each one on its own node.
-- A DaemonSet makes sure it creates as many pods as there are nodes and deploys
-each one on its own node.
+- A DaemonSet makes sure it creates as many pods as there are nodes and deploys each one on its own node.
 
 ### Job resources
 - You’ll have cases where you only want to run a task that terminates after completing its work.
@@ -142,15 +136,16 @@ each one on its own node.
 - At the configured time, Kubernetes will create a Job resource according to the Job template configured in the CronJob object
 
 ### Take away for Replication and other controllers
-- You can specify a liveness probe to have Kubernetes restart your container as
-soon as it’s no longer healthy (where the app defines what’s considered
-healthy).
+- You can specify a liveness probe to have Kubernetes restart your container as soon as it’s no longer healthy (where the app defines what’s considered healthy).
 - Pods shouldn’t be created directly, because they will not be re-created if they’re deleted by mistake, if the node they’re running on fails, or if they’re evicted from the node.
-- ReplicationControllers always keep the desired number of pod replicas
-running.
+- ReplicationControllers always keep the desired number of pod replicas running.
 - Scaling pods horizontally is as easy as changing the desired replica count on a ReplicationController.
-- Pods aren’t owned by the ReplicationControllers and can be moved between
-them if necessary.
-- A ReplicationController creates new pods from a pod template. Changing the
-template has no effect on existing pods.
+- Pods aren’t owned by the ReplicationControllers and can be moved between them if necessary.
+- A ReplicationController creates new pods from a pod template. Changing the template has no effect on existing pods.
 
+### Services
+- Enabling clients to discover and talk to pods.
+- Pods need a way of finding other pods if they want to consume the services they provide. Unlike in the non-Kubernetes world, where a sysadmin would configure each client app by specifying the exact IP address or hostname of the server providing the service in the client’s configuration files, doing the same in Kubernetes wouldn’t work, because:
+    - Pods are ephemeral
+    - Kubernetes assigns an IP address to a pod after the pod has been scheduled to a node and before it’s started
+    - Horizontal scaling means multiple pods may provide the same service
