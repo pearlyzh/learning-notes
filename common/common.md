@@ -4,7 +4,7 @@
 - Hypothetic:
 	- Meet demand:
 		- Functional Requirement:
-			- What it should do, such as allowing data to be stored, retrieved, searched, and processed in various ways
+			- What it should do, such as allowing data to be stored, retrieved, searched, and processed in various ways.
 		- Non-functional requirement:
 			- General properties like security, reliability, compliance, scalability, compatibility, and maintainability.
 	- Data intensive Application:
@@ -58,7 +58,9 @@
 						- Optimistic concurrency control techniques such as serializable snapshot isolation
 - MySQL:
 	- InnoDB: https://stackoverflow.com/questions/4358732/is-incrementing-a-field-in-mysql-atomic
+	- How to figure out if mysql index fits entirely in memory? https://stackoverflow.com/questions/11748629/how-to-figure-out-if-mysql-index-fits-entirely-in-memory
 	- B-tree vs B+-tree
+		- https://stackoverflow.com/questions/870218/what-are-the-differences-between-b-trees-and-b-trees
 		- https://stackoverflow.com/questions/870218/differences-between-b-trees-and-b-trees
 		- https://towardsdatascience.com/why-we-need-indexes-for-database-tables-25198145a8ca
 		- https://www.quora.com/-What-are-the-differences-between-B+Tree-and-B-Tree
@@ -128,7 +130,7 @@
 				- Servlet container contain and manage a servlet life cycle
 				- https://stackoverflow.com/questions/44172261/how-spring-boot-application-works-internally#:~:text=From%20the%20run%20method%2C%20the,inside%20JVM%20which%20is%20known
 			- Boot vs Cloud vs MVC:
-				- Boot: a framework for setting up an application quickly, enables us to focus just on the business code (reduce botter-plate configuration code)
+				- Boot: a framework for setting up an application quickly, enables us to focus just on the business code (reduce boiler-plate configuration code)
 				- MVC: One of projects in Spring framework which supports building web oriented application (based on Servlet)
 			- Spring Cloud: provides tools for developers to quickly build some of the common patterns in distributed systems
 			- Servlet:
