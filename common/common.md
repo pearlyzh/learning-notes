@@ -562,6 +562,8 @@ first virtual node encountered on the ring
 
 
 ## Experience
+- Principles:
+	- SOLID: https://medium.com/nerd-for-tech/solid-principles-in-java-5cf926e44247
 - Life:
 	- https://medium.com/kaizen-habits/6-better-things-to-do-after-6-p-m-thatll-enrich-your-life-6cf56f37618b
 - Trade off: https://martinfowler.com/articles/microservice-trade-offs.html
