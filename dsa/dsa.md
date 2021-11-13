@@ -40,3 +40,7 @@
 
 ## Daily life
 - Elevator Algorithm: https://softwareengineering.stackexchange.com/questions/331692/what-algorithm-is-used-by-elevators-to-find-the-shortest-path-to-travel-floor-or
+
+## Monotonic Stack
+- https://labuladong.gitbook.io/algo-en/ii.-data-structure/monotonicstack
+- https://leetcode.com/problems/daily-temperatures/submissions/
