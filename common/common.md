@@ -539,7 +539,9 @@ first virtual node encountered on the ring
 
 ## Beautiful Tool - Mindset
 - Kafka:
-	- Compare with RabbitMQ: https://betterprogramming.pub/rabbitmq-vs-kafka-1779b5b70c41
+	- Compare with RabbitMQ: 
+		- https://betterprogramming.pub/rabbitmq-vs-kafka-1779b5b70c41
+		- https://tarunbatra.com/blog/comparison/How-to-choose-between-Kafka-and-RabbitMQ/
 	- https://data-flair.training/blogs/kafka-architecture/
 	- https://medium.com/streamthoughts/apache-kafka-rebalance-protocol-or-the-magic-behind-your-streams-applications-e94baf68e4f2
 	- Perfect explanation: https://medium.com/swlh/apache-kafka-in-a-nutshell-5782b01d9ffb
