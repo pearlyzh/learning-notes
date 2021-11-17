@@ -119,6 +119,9 @@
 	- JVM:
 		- https://ajay-yadav109458.medium.com/jvm-overview-21458b81ac4
 		- https://sahiladhav16.medium.com/understanding-jvm-architecture-cc3fcee39b9a
+		- Daemon thread: 
+			- A daemon thread is a thread that does not prevent the JVM from exiting when the program finishes but the thread is still running. An example for a daemon thread is the garbage collection.
+			- https://stackoverflow.com/questions/2213340/what-is-a-daemon-thread-in-java
 	- Docs:
 		- http://web.mit.edu/6.005/www/fa15/
 	- Gargabe Collector:
