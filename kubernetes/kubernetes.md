@@ -1,8 +1,7 @@
 # Kubernetes
 
 ## DevOps and NoOps
-- Ideally, you want the developers to deploy applications themselves without knowing
-anything about the hardware infrastructure and without dealing with the ops team. This is referred to as NoOps
+- Ideally, you want the developers to deploy applications themselves without knowing anything about the hardware infrastructure and without dealing with the ops team. This is referred to as NoOps
 
 ## Containers
 ### Linux Container technologies
@@ -10,17 +9,18 @@ anything about the hardware infrastructure and without dealing with the ops team
 - Containers, on the other hand, all perform system calls on the exact same kernel running in the host OS. This single kernel is the only one performing x86 instructions on the host’s CPU.
 - How about security, because containers all call out to the same kernel, and resource isolated as well?
     - Two mechanisms make this possible:
+        - https://www.tothenew.com/blog/cgroups-and-namespaces-on-ubuntu/
         - The first one, Linux Namespaces, makes sure each process sees its own personal view of the system (files, processes, network interfaces, hostname, and so on). 
         - The second one is Linux Control Groups (**cgroups**), which limit the amount of resources the process can consume (CPU, memory, network bandwidth, and so on).
 ### Isolate Resource with Linux Namespace
+- https://www.tothenew.com/blog/cgroups-and-namespaces-on-ubuntu/
 - By default, each Linux system initially has one single namespace. 
 - All system resources, such as **filesystems**, process IDs, user IDs, network interfaces, and others, belong to the single namespace.
-- We can create additional namespaces and organize resources across them. When running a process, you run it inside one of those namespaces. The process will only see resources that are inside the same names pace.
+- We can create additional namespaces and organize resources across them. When running a process, you run it inside one of those namespaces. The process will only see resources that are inside the same namespace.
 - Each namespace kind is used to isolate a certain group of resources (Mount, Process ID, Network, Inter-process communication, UTS, User ID)
 - Limit resources:
     - This is achieved with **cgroups**, a Linux kernel feature that limits the resource usage of a process (or a group of processes).
-    - A process
-can’t use more than the configured amount of CPU, memory, network bandwidth
+    - A process can’t use more than the configured amount of CPU, memory, network bandwidth
 
 ### Docker
  - It simplified the process of packaging up not only the application but also all its libraries and other dependencies, even the whole OS file system, into a simple, portable package. It sees the exact filesystem contents that you’ve bundled with it.
@@ -149,3 +149,19 @@ pods and rescheduling them when nodes failed. It is a Kubernetes resource that e
     - Pods are ephemeral
     - Kubernetes assigns an IP address to a pod after the pod has been scheduled to a node and before it’s started
     - Horizontal scaling means multiple pods may provide the same service
+- Exposes multiple HTTP services through a single Ingress (consuming a single IP)
+
+
+### Volumes
+- Create a multi-container pod and have the pod’s containers operate on the
+same files by adding a volume to the pod and mounting it in each container
+- Use the emptyDir volume to store temporary, non-persistent data
+- Use the gitRepo volume to easily populate a directory with the contents of a Git
+repository at pod startup
+- Use the hostPath volume to access files from the host node
+- Mount external storage in a volume to persist pod data across pod restarts
+- Decouple the pod from the storage infrastructure by using PersistentVolumes
+and PersistentVolumeClaims
+- Have PersistentVolumes of the desired (or the default) storage class dynamically
+provisioned for each PersistentVolumeClaim
+- Prevent the dynamic provisioner from interfering when you want the
