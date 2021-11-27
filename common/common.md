@@ -423,6 +423,7 @@ first virtual node encountered on the ring
 - CRDT: https://www.figma.com/blog/how-figmas-multiplayer-technology-works/?fbclid=IwAR3_bKwHI4-iY8T-iVSjlU3wQIxv0K7uRW2FaJkVcve6HsHjQrL91RB8DSI
 - The log: https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying
 - Idempotent and Deterministic: 
+	- https://betterprogramming.pub/a-deep-dive-into-idempotence-1a39393df7e6
 	- Idempotency does not imply determinacy (as a function can alter state on the first call while being idempotent on subsequent calls), but all pure deterministic functions are inherently idempotent (as there is no internal state to persist between calls). Impure deterministic functions are not necessarily idempotent.
 	- https://stackoverflow.com/questions/40296211/what-is-the-difference-between-an-idempotent-and-a-deterministic-function
 - Consensus:
