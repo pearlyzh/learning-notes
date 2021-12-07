@@ -196,6 +196,9 @@
 		https://en.wikipedia.org/wiki/Datagram
 	handshake
 	- TCP internals:
+		- https://stackoverflow.com/questions/11077857/what-are-long-polling-websockets-server-sent-events-sse-and-comet
+		- https://medium.com/fantageek/understanding-socket-and-port-in-tcp-2213dc2e9b0c#:~:text=Ports%20are%2016%2Dbit%20numbers,given%20host%20port%20is%2064K.
+		- https://stackoverflow.com/questions/2332741/what-is-the-theoretical-maximum-number-of-open-tcp-connections-that-a-modern-lin
 		- https://www.oreilly.com/library/view/http-the-definitive/1565925092/ch04s01.html
 		- https://sookocheff.com/post/networking/how-does-tcp-work/#:~:text=senders%20and%20receivers.-,TCP%20Segments,and%20an%20optional%20extension%20field.
 	- BUFFER:
@@ -242,6 +245,7 @@
 		- RabbitMQ
 - Bidirectional Communication:
 	- SSE vs WebSocket: https://stackoverflow.com/a/5326159/6085492
+	- https://medium.com/system-design-blog/long-polling-vs-websockets-vs-server-sent-events-c43ba96df7c1#:~:text=Unlike%20WebSockets%2C%20Server%2DSent%20Events,an%20HTTP%20connection%20without%20polling.&text=The%20client%20receives%20each%20event%20from%20the%20server%20and%20process%20it.
 
 ## Mechanism
 - Consistent Hashing:
@@ -254,6 +258,7 @@
 	- Event loop
 	- Worker thread
 	- Netty:
+		- https://ayedo.github.io/netty/2013/06/19/what-is-netty.html
 		http://webcache.googleusercontent.com/search?q=cache:http://seeallhearall.blogspot.com/2012/05/netty-tutorial-part-1-introduction-to.html
 - "Zero-copy": "Zero-copy" describes computer operations in which the CPU does not perform the task of copying data from one memory area to another. This is frequently used to save CPU cycles and memory bandwidth when transmitting a file over a network.[1]
 	- https://en.wikipedia.org/wiki/Zero-copy
@@ -552,6 +557,7 @@ first virtual node encountered on the ring
 	- Kafka without Zookeeper - Zookeeper-less Kafka: https://towardsdatascience.com/kafka-no-longer-requires-zookeeper-ebfbf3862104
 	- Very short and handy explanations: https://sagarkudu.medium.com/
 	- Kafka storage internals: https://rohithsankepally.github.io/Kafka-Storage-Internals/
+	- https://stackoverflow.com/questions/46546489/how-does-kafka-consumer-auto-commit-work
 - Another perfect one: https://medium.com/better-programming/thorough-introduction-to-apache-kafka-6fbf2989bbc1
 - Container and Orchestration
 	- Docker:
