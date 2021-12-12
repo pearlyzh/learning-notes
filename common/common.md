@@ -30,6 +30,7 @@
 		- Preparation of financial statements: The information recorded in a single-entry system isn’t adequate for financial reporting or preparing profit and loss statements. Bigger organizations rely on these reports to track their performance, so they need the extra information captured by double-entry accounting.
 
 ## Database
+- Session vs Connection: https://dba.stackexchange.com/questions/13698/what-is-the-difference-between-a-connection-and-a-session#:~:text=Connection%20represents%20connection%20to%20the,or%20more%20then%20one%20session.
 - Transaction:
 	- ACID
 		- Atomicity:
@@ -57,6 +58,7 @@
 						- Literally executing transactions in a serial order
 						- Optimistic concurrency control techniques such as serializable snapshot isolation
 - MySQL:
+	- https://qxf2.com/blog/mysql-architecture-and-layers/
 	- InnoDB: https://stackoverflow.com/questions/4358732/is-incrementing-a-field-in-mysql-atomic
 	- How to figure out if mysql index fits entirely in memory? https://stackoverflow.com/questions/11748629/how-to-figure-out-if-mysql-index-fits-entirely-in-memory
 	- B-tree vs B+-tree
@@ -116,6 +118,28 @@
 - Declararive vs Imperative padigram:
 	- https://stackoverflow.com/a/1784687/6085492
 - Java:
+- +---------+
+|  stack  |  function-local variables, return addresses, return values, etc.
+|         |  often grows downward, commonly accessed via "push" and "pop" (but can be
+|         |  accessed randomly, as well; disassemble a program to see)
++---------+
+| shared  |  mapped shared libraries (C libraries, math libs, etc.)
+|  libs   |
++---------+
+|  hole   |  unused memory allocated between the heap and stack "chunks", spans the
+|         |  difference between your max and min memory, minus the other totals
++---------+
+|  heap   |  dynamic, random-access storage, allocated with 'malloc' and the like.
++---------+
+|   bss   |  Uninitialized global variables; must be in read-write memory area
++---------+
+|  data   |  data segment, for globals and static variables that are initialized
+|         |  (can further be split up into read-only and read-write areas, with
+|         |  read-only areas being stored elsewhere in ROM on some systems)
++---------+
+|  text   |  program code, this is the actual executable code that is running.
++---------+
+	- https://stackoverflow.com/a/5162649/6085492
 	- JVM:
 		- https://ajay-yadav109458.medium.com/jvm-overview-21458b81ac4
 		- https://sahiladhav16.medium.com/understanding-jvm-architecture-cc3fcee39b9a
@@ -543,7 +567,7 @@ first virtual node encountered on the ring
 		- Event notification
 		- Event-carried state transfer
 		- Event Sourcing
-		- CQRS
+		- CQRS: https://datamify.com/architecture/how-to-understand-cqrs-in-microservices-architecture/
 
 
 ## Beautiful Tool - Mindset
