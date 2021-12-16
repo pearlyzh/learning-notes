@@ -255,6 +255,7 @@
 	- https://stackoverflow.com/questions/2728495/what-is-the-difference-between-java-rmi-and-rpc
 - RPC
 	- https://www.smashingmagazine.com/2016/09/understanding-rest-and-rpc-for-http-apis/
+	- https://medium.com/geekculture/bulletproof-distributed-systems-how-to-fail-at-http-calls-e7f0b3240d19
 - gRPC
 	- Base on HTTP2
 	- Use Protobuf standard for data present
