@@ -304,7 +304,8 @@
 		- Torch is an implementation of
 		- Go through many of hops that encrypted-decrypted (and in contrary) data in many layers
 
-## OS
+## Operating System
+- OS Family tree: https://i.imgur.com/EpT5Pwf.png
 - Is a platform
 - Common concepts:
 	- https://towardsdatascience.com/all-you-should-know-about-operating-systems-in-technical-interviews-4dcc55210fea
