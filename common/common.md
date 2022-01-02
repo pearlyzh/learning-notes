@@ -105,9 +105,14 @@
 	- typically user-facing, which means that they may see a huge volume of requests. Disk seek time is often the bottleneck here.
 - OLAP:
 	- Disk bandwidth (not seek time) is often the bottleneck here, and column-oriented-storage is an increasingly popular solution for this kind of workload.
+- CDC: change data capture
+	- Debezium:
+		- https://medium.com/yotpoengineering/scheduling-millions-of-messages-with-kafka-debezium-6d1a105160c
 
 ## Caching
 - Redis:
+	- Redis as a database:
+		- https://medium.com/wix-engineering/redis-as-a-database-f9df579b09c0
 	- Distributed locking:
 		- https://redislabs.com/ebook/part-2-core-concepts/chapter-6-application-components-in-redis/6-2-distributed-locking/
 		- https://www.quora.com/Distributed-Systems/Why-do-people-need-a-distributed-lock/answer/Sean-Owen?__snids__=52301574
@@ -163,6 +168,7 @@
 			- Servlet:
 				- An interface in javax.servlet package
 				- init() - service() - destroy()
+			- Filter vs Interceptor: https://www.baeldung.com/spring-mvc-handlerinterceptor-vs-filter
 			- Servlet Container:
 				- https://stackoverflow.com/questions/3106452/how-do-servlets-work-instantiation-sessions-shared-variables-and-multithreadi
 			- Design pattern:
@@ -179,6 +185,8 @@
 		- https://qr.ae/TfazUC
 		- https://qr.ae/TfexsR
 	- Service Loader
+	- String pool and String heap:
+		- https://medium.com/javarevisited/string-stringbuilder-and-stringbuffer-do-you-know-the-difference-6a53429dcf
 	- Annotation:
 		- An annotation is a marker which associates information with a program construct, but has no effect at run time.
 	- Concurrency tutorial:
@@ -189,6 +197,17 @@
 		- Internals: https://stackoverflow.com/questions/17368595/java-lock-concept-how-internally-works#:~:text=Each%20object%20in%20Java%20is,a%20lock%20on%20that%20monitor.
 	- Interview:
 		- https://howtodoinjava.com/spring-core/spring-ioc-vs-di/
+	- Entity vs POJO vs DTO vs JavaBean:
+		- https://www.reddit.com/r/learnjava/comments/b2h3pm/differences_between_java_bean_entity_class_dao/
+	- Modern Java: 
+		- Tricky questions: https://levelup.gitconnected.com/tricky-java-interview-questions-cfc546fd03ab
+		- https://french-tech-lead.medium.com/the-weirdest-java-interview-questions-that-you-ever-heard-of-2ec8b24be8ff
+		- https://marian-caikovski.medium.com/java-17-language-compared-to-java-8-how-modern-java-is-better-than-java-8-65a4e39c448e
+		- Record: 
+			- https://www.baeldung.com/java-record-keyword
+			- As of JDK 14, we can replace our repetitious data classes with records. Records are immutable data classes that require only the type and name of fields.
+		- Switch Expressions:
+			- JDK12 introduced switch expressions. Unlike switch statements they return a value and do not need break statements
 
 ## Networking
 - Security:
@@ -582,7 +601,9 @@ first virtual node encountered on the ring
 	- Perfect explanation: https://medium.com/swlh/apache-kafka-in-a-nutshell-5782b01d9ffb
 	- Kafka without Zookeeper - Zookeeper-less Kafka: https://towardsdatascience.com/kafka-no-longer-requires-zookeeper-ebfbf3862104
 	- Very short and handy explanations: https://sagarkudu.medium.com/
-	- Kafka storage internals: https://rohithsankepally.github.io/Kafka-Storage-Internals/
+	- Kafka storage internals: 
+		- https://strimzi.io/blog/2021/12/17/kafka-segment-retention/
+		- https://rohithsankepally.github.io/Kafka-Storage-Internals/
 	- https://stackoverflow.com/questions/46546489/how-does-kafka-consumer-auto-commit-work
 - Another perfect one: https://medium.com/better-programming/thorough-introduction-to-apache-kafka-6fbf2989bbc1
 - Container and Orchestration
@@ -610,7 +631,12 @@ first virtual node encountered on the ring
 	- https://towardsdatascience.com/10-things-youre-doing-wrong-in-java-7608e2f050c7
 - Interview:
 	- https://betterprogramming.pub/an-interview-question-that-truly-tests-your-experience-as-a-software-engineer-e188efa4e5b6
-- System Design: https://github.com/donnemartin/system-design-primer#load-balancer-vs-reverse-proxy
+	- https://prachitiwari9.medium.com/spotify-interview-experience-c152e4f1b4a9
+	- https://www.educative.io/courses/grokking-the-system-design-interview/m2ygV4E81AR
+- System Design: 
+	- https://github.com/donnemartin/system-design-primer#load-balancer-vs-reverse-proxy
+	- https://tagofabic.medium.com/key-things-i-learned-after-moving-into-a-software-architect-role-dce88f9452a7
+	- https://medium.com/@nvashanin/the-path-to-becoming-a-software-architect-de53f1cb310a
 - Micro-services:
 	- https://www.martinfowler.com/articles/microservices.html
 		- Componentization via Services (Services over Libraries)
