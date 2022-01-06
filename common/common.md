@@ -57,6 +57,8 @@
 					- Implementing:
 						- Literally executing transactions in a serial order
 						- Optimistic concurrency control techniques such as serializable snapshot isolation
+	- Lost updates: Two clients concurrently perform a read-modify-write cycle. One overwrites the other’s write without incorporating its changes, so data is lost. Some implementations of snapshot isolation prevent this anomaly automatically, while others require a manual lock (SELECT FOR UPDATE).
+	- Write skew: A transaction reads something, makes a decision based on the value it saw, and writes the decision to the database. However, by the time the write is made, the premise of the decision is no longer true. Only serializable isolation prevents this anomaly.
 - MySQL:
 	- https://qxf2.com/blog/mysql-architecture-and-layers/
 	- InnoDB: https://stackoverflow.com/questions/4358732/is-incrementing-a-field-in-mysql-atomic
