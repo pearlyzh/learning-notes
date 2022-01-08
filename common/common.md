@@ -60,6 +60,7 @@
 	- Lost updates: Two clients concurrently perform a read-modify-write cycle. One overwrites the other’s write without incorporating its changes, so data is lost. Some implementations of snapshot isolation prevent this anomaly automatically, while others require a manual lock (SELECT FOR UPDATE).
 	- Write skew: A transaction reads something, makes a decision based on the value it saw, and writes the decision to the database. However, by the time the write is made, the premise of the decision is no longer true. Only serializable isolation prevents this anomaly.
 - MySQL:
+	- So based on 2 tests, I have some conclusions for MariaDB/MySQL at REPEATABLE isolation level: When using just select statement, phantom read doesn’t happen as SQL standard mentioned.
 	- https://qxf2.com/blog/mysql-architecture-and-layers/
 	- InnoDB: https://stackoverflow.com/questions/4358732/is-incrementing-a-field-in-mysql-atomic
 	- How to figure out if mysql index fits entirely in memory? https://stackoverflow.com/questions/11748629/how-to-figure-out-if-mysql-index-fits-entirely-in-memory
@@ -351,6 +352,9 @@
 	- Scheduler
 		- Thread vs Proccess
 		- Switch context
+			- A context switch is the process of storing the state of a process or thread, so that it can be restored and resume execution at a later point. This allows multiple processes to share a single central processing unit (CPU), and is an essential feature of a multitasking operating system.
+			- Stack Pointer and Program Counter:
+				- https://pediaa.com/what-is-the-difference-between-stack-pointer-and-program-counter/
 - Stuffs:
 	- Abstractions (process, thread, file, socket, memory)
 	- Mechanisms (create, schedule, open, write, allocate)
