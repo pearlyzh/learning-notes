@@ -62,7 +62,9 @@
 - MySQL:
 	- So based on 2 tests, I have some conclusions for MariaDB/MySQL at REPEATABLE isolation level: When using just select statement, phantom read doesn’t happen as SQL standard mentioned.
 	- https://qxf2.com/blog/mysql-architecture-and-layers/
-	- InnoDB: https://stackoverflow.com/questions/4358732/is-incrementing-a-field-in-mysql-atomic
+	- InnoDB: 
+		- https://stackoverflow.com/questions/4358732/is-incrementing-a-field-in-mysql-atomic
+		- https://dev.mysql.com/doc/refman/8.0/en/innodb-buffer-pool.html
 	- How to figure out if mysql index fits entirely in memory? https://stackoverflow.com/questions/11748629/how-to-figure-out-if-mysql-index-fits-entirely-in-memory
 	- B-tree vs B+-tree
 		- https://stackoverflow.com/questions/870218/what-are-the-differences-between-b-trees-and-b-trees
@@ -350,7 +352,7 @@
 			- /dev:
 			- /etc: https://unix.stackexchange.com/questions/5665/what-does-etc-stand-for
 	- Scheduler
-		- Thread vs Proccess
+		- Thread vs Process
 		- Switch context
 			- A context switch is the process of storing the state of a process or thread, so that it can be restored and resume execution at a later point. This allows multiple processes to share a single central processing unit (CPU), and is an essential feature of a multitasking operating system.
 			- Stack Pointer and Program Counter:
