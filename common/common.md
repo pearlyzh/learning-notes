@@ -1,6 +1,8 @@
 # Common
 ## Experience
 - Twitter at scale: https://blog.twitter.com/engineering/en_us/topics/infrastructure/2017/the-infrastructure-behind-twitter-scale.html
+- Deployments:
+	- Zero downtime deployment: https://avikdas.com/2020/06/30/scalability-concepts-zero-downtime-deployments.html
 - Hypothetic:
 	- Meet demand:
 		- Functional Requirement:
@@ -65,6 +67,7 @@
 	- InnoDB: 
 		- https://stackoverflow.com/questions/4358732/is-incrementing-a-field-in-mysql-atomic
 		- https://dev.mysql.com/doc/refman/8.0/en/innodb-buffer-pool.html
+		- https://stackoverflow.com/a/10164697/6085492
 	- How to figure out if mysql index fits entirely in memory? https://stackoverflow.com/questions/11748629/how-to-figure-out-if-mysql-index-fits-entirely-in-memory
 	- B-tree vs B+-tree
 		- https://stackoverflow.com/questions/870218/what-are-the-differences-between-b-trees-and-b-trees
@@ -629,6 +632,8 @@ first virtual node encountered on the ring
 
 
 ## Experience
+- Monotonically increasing id:
+	- https://www.quora.com/How-do-you-generate-monotonically-increasing-sequence-numbers-seqnums-in-a-large-distributed-system
 - Principles:
 	- SOLID: https://medium.com/nerd-for-tech/solid-principles-in-java-5cf926e44247
 	- Duck Typing:  what the object can actually do, rather than what the object is. It's BAD
