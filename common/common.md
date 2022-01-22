@@ -47,6 +47,7 @@
 			- Snapshot Isolation and Repeatable Read: 
 				- Non-repeatable read or Read Skew (e.g. To Alice it now appears as though she only has a total of $900 in her accounts—it seems that $100 has vanished into thin air).
 				- Implement: Multiversion concurency control
+				- When a transaction is started, it is given a unique, always-increasingvii transaction ID (txid). Whenever a transaction writes anything to the database, the data it writes is tagged with the transaction ID of the writer.
 			- Preventing Lost updates:
 				- SELECT * FROM figures WHERE name = 'robot' AND game_id = 222 FOR UPDATE;
 				- Usual approach which can cause Lost updates: Read-Modify-Write cycle
