@@ -44,3 +44,12 @@
 ## Monotonic Stack
 - https://labuladong.gitbook.io/algo-en/ii.-data-structure/monotonicstack
 - https://leetcode.com/problems/daily-temperatures/submissions/
+
+## 2D array
+ - m as the number of rows, n as the number of cols, so if we need to find the ith-indexed (0 indexed) element in the array, use this formula: row-index = i / n, col-index = i % n
+### Searching
+ - For peak element, we can do binary search so that if a[mid] < a[mid + 1], we know that the peak should be on the right side, and vice versa. If we are using the formula mid = left + (right - left) / 2, then we need to be careful to do comparison between mid and its neighbour, in this case, nums[mid] should be compare to nums[mid + 1]. Because if the array (or subarray) has just 2 elements, we will not end up comparing nums[mid] with a outsider element which is nums[mid - 1]
+
+### String to Int
+ - We need to be aware of the MAX/MIN integer check when we are building the result. This is the condition that we know the result will anyway be bigger or equal MAX_INT or smaller or equal MIN_INT:
+    - The result is bigger than the MAX_INT / 10 **or** The result is equals to MAX_INT / 10 **but** the next number to be added to the result is bigger than or equals to the last number of MAX_INT(7). For MIN_INT, the next number should be smaller than 8
