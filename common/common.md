@@ -309,6 +309,7 @@
 - Non Blocking
 	- Callback
 	- Event loop
+		- https://www.quora.com/Is-Node-js-really-single-threaded-Describe-what-happens-if-a-node-js-server-receives-two-requests-at-the-same-time
 	- Worker thread
 	- Netty:
 		- https://ayedo.github.io/netty/2013/06/19/what-is-netty.html
@@ -633,6 +634,8 @@ first virtual node encountered on the ring
 
 
 ## Experience
+- Mechanical sympathy:
+	- https://www.youtube.com/watch?v=Qho1QNbXBso
 - Monotonically increasing id:
 	- https://www.quora.com/How-do-you-generate-monotonically-increasing-sequence-numbers-seqnums-in-a-large-distributed-system
 - Principles:
@@ -651,6 +654,7 @@ first virtual node encountered on the ring
 	- https://github.com/donnemartin/system-design-primer#load-balancer-vs-reverse-proxy
 	- https://tagofabic.medium.com/key-things-i-learned-after-moving-into-a-software-architect-role-dce88f9452a7
 	- https://medium.com/@nvashanin/the-path-to-becoming-a-software-architect-de53f1cb310a
+	- https://levelup.gitconnected.com/how-to-improve-software-architecture-skills-daily-6f362d4e6493
 - Micro-services:
 	- https://www.martinfowler.com/articles/microservices.html
 		- Componentization via Services (Services over Libraries)
