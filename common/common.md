@@ -154,6 +154,9 @@
 |  text   |  program code, this is the actual executable code that is running.
 +---------+
 	- https://stackoverflow.com/a/5162649/6085492
+	- Volatile:
+		- https://stackoverflow.com/questions/12438464/volatile-variables-and-other-variables
+		- Baeldung
 	- JVM:
 		- https://ajay-yadav109458.medium.com/jvm-overview-21458b81ac4
 		- https://sahiladhav16.medium.com/understanding-jvm-architecture-cc3fcee39b9a
@@ -219,6 +222,7 @@
 			- JDK12 introduced switch expressions. Unlike switch statements they return a value and do not need break statements
 
 ## Networking
+- BGP: https://www.cloudflare.com/learning/security/glossary/what-is-bgp/
 - Security:
 	- CORS (Cross-site origins):
 		- CORS and XSS:
@@ -528,6 +532,10 @@ first virtual node encountered on the ring
 - Flow of control: https://www.youtube.com/watch?v=EEEGBwEA8yA
 - Distributed transaction:
 	- Patterns: https://developers.redhat.com/articles/2021/09/21/distributed-transaction-patterns-microservices-compared?utm_campaign=Grokking%20Newsletter&utm_medium=email&utm_source=Revue%20newsletter#
+	- 2 phase commit:
+		- 3 phase commit: https://stackoverflow.com/a/21581171/6085492
+			- When receiving a pre-commit message, participants know that all others have voted to commit. 
+			- If a pre-commit message has not been received the participant will abort and release any blocked resources. 
 	- SEATA:
 		- https://github.com/seata/seata
 - Synchronous Versus Asynchronous Networks:
@@ -634,6 +642,8 @@ first virtual node encountered on the ring
 
 
 ## Experience
+- Rule engine:
+	- https://medium.com/@er.rameshkatiyar/what-is-rule-engine-86ea759ad97d
 - Mechanical sympathy:
 	- https://www.youtube.com/watch?v=Qho1QNbXBso
 - Monotonically increasing id:
