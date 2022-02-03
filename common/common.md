@@ -188,6 +188,9 @@
 				- Memento: 
 					- https://refactoring.guru/design-patterns/memento
 					- https://www.baeldung.com/java-memento-design-pattern
+			- Transaction:
+				- https://medium.com/javarevisited/spring-never-rollback-readonly-transactions-ffc21958b0d0
+				- https://www.javainuse.com/spring/boot-transaction-propagation
 	- Finalize
 		- https://www.geeksforgeeks.org/g-fact-24-finalfinally-and-finalize-in-java/
 	- JMX
