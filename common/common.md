@@ -645,6 +645,9 @@ first virtual node encountered on the ring
 
 
 ## Experience
+- Quora:
+	- https://www.quora.com/Why-do-QR-codes-have-squares-in-three-corners
+	- https://www.quora.com/What-are-the-most-common-reasons-why-software-engineers-get-fired
 - Rule engine:
 	- https://medium.com/@er.rameshkatiyar/what-is-rule-engine-86ea759ad97d
 - Mechanical sympathy:
