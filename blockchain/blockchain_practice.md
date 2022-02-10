@@ -5,4 +5,5 @@
    - Code Your First Smart Contract:
    https://www.youtube.com/watch?v=MTC8BHrmrJA
 
-# Theory
+# Investment
+ - https://investing.vn/trade-coin-tren-binance-tim-hieu-ve-lenh-giao-dich-tren-binance.html
