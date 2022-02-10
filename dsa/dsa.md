@@ -12,7 +12,9 @@
 - Bloom filter
 ## Disruptor
 - Ring buffer
-- Mechabical Sympathy: https://www.youtube.com/watch?v=Qho1QNbXBso
+- Mechabical Sympathy: 
+    - https://www.youtube.com/watch?v=Qho1QNbXBso
+    - If you want performance, don's share cache line
 - Key concepts:
     - https://itnext.io/understanding-the-lmax-disruptor-caaaa2721496
     - The LMAX Disruptor solution is faster than Java ArrayBlockingQueue and LinkedBlockingQueue.
@@ -48,7 +50,7 @@
 ## 2D array
  - m as the number of rows, n as the number of cols, so if we need to find the ith-indexed (0 indexed) element in the array, use this formula: row-index = i / n, col-index = i % n
 ### Searching
- - For peak element, we can do binary search so that if a[mid] < a[mid + 1], we know that the peak should be on the right side, and vice versa. If we are using the formula mid = left + (right - left) / 2, then we need to be careful to do comparison between mid and its neighbour, in this case, nums[mid] should be compare to nums[mid + 1]. Because if the array (or subarray) has just 2 elements, we will not end up comparing nums[mid] with a outsider element which is nums[mid - 1]
+ - For peak element, we can do binary search so that if a[mid] < a[mid + 1], we know that the peak should be on the right side, and vice versa. If we are using the formula mid = left + (right - left) / 2, then we need to be careful to do comparison between mid and its neighbour, in this case, nums[mid] should be compare to nums[mid + 1]. Because if the array (or subarray) has just 2 elements, we will not end up comparing nums[mid] with an outsider element which is nums[mid - 1]
 
 ### String to Int
  - We need to be aware of the MAX/MIN integer check when we are building the result. This is the condition that we know the result will anyway be bigger or equal MAX_INT or smaller or equal MIN_INT:
