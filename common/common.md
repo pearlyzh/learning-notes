@@ -616,6 +616,8 @@ first virtual node encountered on the ring
 
 
 ## Beautiful Tool - Mindset
+- Product:
+	- https://www.interaction-design.org/literature/article/minimum-viable-product-mvp-and-design-balancing-risk-to-gain-reward#:~:text=The%20simplest%20definition%20is%20that,of%20the%20value%20back).%E2%80%9D
 - Kafka:
 	- Compare with RabbitMQ: 
 		- https://betterprogramming.pub/rabbitmq-vs-kafka-1779b5b70c41
@@ -649,6 +651,8 @@ first virtual node encountered on the ring
 	- chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/viewer.html?pdfurl=http%3A%2F%2Fwww.redbooks.ibm.com%2Ftechnotes%2Ftips1287.pdf&clen=990030&chunk=true
 	- https://www.quora.com/Why-do-QR-codes-have-squares-in-three-corners
 	- https://www.quora.com/What-are-the-most-common-reasons-why-software-engineers-get-fired
+	- https://qr.ae/pGjUY7
+	- https://qr.ae/pGQWl8
 - Rule engine:
 	- https://medium.com/@er.rameshkatiyar/what-is-rule-engine-86ea759ad97d
 - Mechanical sympathy:
@@ -660,6 +664,7 @@ first virtual node encountered on the ring
 	- Duck Typing:  what the object can actually do, rather than what the object is. It's BAD
 - Life:
 	- https://medium.com/kaizen-habits/6-better-things-to-do-after-6-p-m-thatll-enrich-your-life-6cf56f37618b
+	- https://medium.com/@_michaellin/how-to-be-a-10x-engineer-fdac2a5a1bd5
 - Trade off: https://martinfowler.com/articles/microservice-trade-offs.html
 - Mistakes:
 	- https://towardsdatascience.com/10-things-youre-doing-wrong-in-java-7608e2f050c7
@@ -672,6 +677,8 @@ first virtual node encountered on the ring
 	- https://tagofabic.medium.com/key-things-i-learned-after-moving-into-a-software-architect-role-dce88f9452a7
 	- https://medium.com/@nvashanin/the-path-to-becoming-a-software-architect-de53f1cb310a
 	- https://levelup.gitconnected.com/how-to-improve-software-architecture-skills-daily-6f362d4e6493
+- Java:
+	- https://medium.com/sahibinden-technology/brief-notes-from-effective-java-17421159295a
 - Micro-services:
 	- https://www.martinfowler.com/articles/microservices.html
 		- Componentization via Services (Services over Libraries)
