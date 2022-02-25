@@ -298,6 +298,7 @@
 	- https://cs.mcgill.ca/~mxia3/2019/02/23/Using-gRPC-in-Production/
 	- Flow control: https://www.youtube.com/watch?v=EEEGBwEA8yA
 	- stream ID in a connection reaches max value (2^32) https://github.com/grpc/grpc/issues/957
+	- https://kubernetes.io/blog/2018/11/07/grpc-load-balancing-on-kubernetes-without-tears/
 - Asynchronous:
 	- Messaging:
 		- AMQ
