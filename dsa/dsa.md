@@ -55,3 +55,6 @@
 ### String to Int
  - We need to be aware of the MAX/MIN integer check when we are building the result. This is the condition that we know the result will anyway be bigger or equal MAX_INT or smaller or equal MIN_INT:
     - The result is bigger than the MAX_INT / 10 **or** The result is equals to MAX_INT / 10 **but** the next number to be added to the result is bigger than or equals to the last number of MAX_INT(7). For MIN_INT, the next number should be smaller than 8
+
+### Tree level traversal
+For a fuIl binary tree, if parent node has position = i, then left-child's position = 2i and right-child's position = 2i + 1
