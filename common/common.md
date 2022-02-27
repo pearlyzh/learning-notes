@@ -3,6 +3,7 @@
 - Twitter at scale: https://blog.twitter.com/engineering/en_us/topics/infrastructure/2017/the-infrastructure-behind-twitter-scale.html
 - Deployments:
 	- Zero downtime deployment: https://avikdas.com/2020/06/30/scalability-concepts-zero-downtime-deployments.html
+- Mindmap for Design Data Intensive Application: https://medium.com/@Joker3D/mind-maps-of-designing-data-intensive-application-2b7556be92b3
 - Hypothetic:
 	- Meet demand:
 		- Functional Requirement:
