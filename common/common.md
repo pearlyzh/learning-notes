@@ -88,6 +88,7 @@
 - Cassandra:
 	- Is Column family, not column oriented:
 		- https://stackoverflow.com/questions/13010225/why-many-refer-to-cassandra-as-a-column-oriented-database
+		- https://www.quora.com/How-is-Cassandra-a-columnar-database
 	- Column-based vs row-based:
 		- https://dataschool.com/data-modeling-101/row-vs-column-oriented-databases/
 	- Hinted handoff:
@@ -682,6 +683,7 @@ first virtual node encountered on the ring
 - Java:
 	- https://medium.com/sahibinden-technology/brief-notes-from-effective-java-17421159295a
 - Micro-services:
+	- https://medium.com/everything-full-stack/design-patterns-and-principles-that-support-large-scale-systems-f3c9adf89ad
 	- https://www.martinfowler.com/articles/microservices.html
 		- Componentization via Services (Services over Libraries)
 		- Organized around Business Capabilities. Conway's law: Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure.
