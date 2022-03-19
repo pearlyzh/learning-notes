@@ -699,7 +699,7 @@ first virtual node encountered on the ring
 			- Data ownership: Beware of how to split the data, extensively think about ownership, think of data change events, work deeply on event driven architecture, use thin/fat event based on your scenario, think about race conditions.
 			- Sync vs Async communication
 			- Project Planning including multiple teams
-			- Check & Monitor permissions, network or things other than code
+			- Check & Monitor permissions, network or things other than code: https://gongybable.medium.com/system-design-design-a-monitoring-system-f0f0cbafc895
 			- Resilient & Robust BFFs & APIs: As there was one BFF for all deep backend api interactions and as we didn’t separate each deep backend api requests thread pools, all threads were busy trying to get response from that specific backend api, BFF became unable to response to even health check requests, thus failed and restarting. Whole APP started crashing or popping up error messages.
 			- Test for every single goddamn thing: 
 
