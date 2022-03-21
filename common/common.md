@@ -674,7 +674,9 @@ first virtual node encountered on the ring
 - Interview:
 	- https://betterprogramming.pub/an-interview-question-that-truly-tests-your-experience-as-a-software-engineer-e188efa4e5b6
 	- https://prachitiwari9.medium.com/spotify-interview-experience-c152e4f1b4a9
-	- https://www.educative.io/courses/grokking-the-system-design-interview/m2ygV4E81AR
+	- System design interiew: 
+		- https://www.educative.io/courses/grokking-the-system-design-interview/m2ygV4E81AR
+		- https://medium.com/geekculture/introduction-to-system-design-interviews-at-faang-27b39a7b715f
 - System Design: 
 	- https://github.com/donnemartin/system-design-primer#load-balancer-vs-reverse-proxy
 	- https://tagofabic.medium.com/key-things-i-learned-after-moving-into-a-software-architect-role-dce88f9452a7
