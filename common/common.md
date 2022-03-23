@@ -257,6 +257,7 @@
 		https://en.wikipedia.org/wiki/Datagram
 	handshake
 	- TCP internals:
+		- https://stackoverflow.com/a/2332756
 		- https://stackoverflow.com/questions/11077857/what-are-long-polling-websockets-server-sent-events-sse-and-comet
 		- https://medium.com/fantageek/understanding-socket-and-port-in-tcp-2213dc2e9b0c#:~:text=Ports%20are%2016%2Dbit%20numbers,given%20host%20port%20is%2064K.
 		- https://stackoverflow.com/questions/2332741/what-is-the-theoretical-maximum-number-of-open-tcp-connections-that-a-modern-lin
@@ -650,6 +651,9 @@ first virtual node encountered on the ring
 
 
 ## Experience
+- Data processing:
+	- Stateless vs Stateful Processing:
+		- https://stackoverflow.com/questions/37246610/stateful-and-stateless-streaming-processing
 - Quora:
 	- chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/viewer.html?pdfurl=http%3A%2F%2Fwww.redbooks.ibm.com%2Ftechnotes%2Ftips1287.pdf&clen=990030&chunk=true
 	- https://www.quora.com/Why-do-QR-codes-have-squares-in-three-corners
