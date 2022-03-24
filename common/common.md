@@ -253,6 +253,7 @@
 			- XSS executes a malicious script in your browser, CSRF sends a malicious request on your behalf (for example, you logged into your fb account and your cookies has the your fb token, then you click on a strange link and realize that you have just liked the porn fucking page on fb)
 - TCP:
 	- https://www.youtube.com/watch?v=794V9oc3ZmI
+	- https://betterprogramming.pub/introduction-to-tcp-connection-establishment-for-software-developers-233878c5143d
 	vs UDP:
 		https://en.wikipedia.org/wiki/Datagram
 	handshake
