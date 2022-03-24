@@ -254,6 +254,8 @@
 - TCP:
 	- https://www.youtube.com/watch?v=794V9oc3ZmI
 	- https://betterprogramming.pub/introduction-to-tcp-connection-establishment-for-software-developers-233878c5143d
+	- Active vs Passive connection:
+		- https://www.baeldung.com/cs/tcp-active-vs-passive
 	vs UDP:
 		https://en.wikipedia.org/wiki/Datagram
 	handshake
