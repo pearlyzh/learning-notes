@@ -352,6 +352,8 @@
 - Is a platform
 - Common concepts:
 	- https://towardsdatascience.com/all-you-should-know-about-operating-systems-in-technical-interviews-4dcc55210fea
+- 32 bits vs 64 bits system:
+	- https://www.youtube.com/watch?v=Wu2A4fpFzgs
 - Linux
 	- https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/
 	- cgroups:
@@ -654,6 +656,8 @@ first virtual node encountered on the ring
 
 
 ## Experience
+- Build a startup:
+	- https://medium.com/dreamwod-tech/how-i-built-my-tech-startup-as-a-solo-developer-45390f460002
 - Data processing:
 	- Stateless vs Stateful Processing:
 		- https://stackoverflow.com/questions/37246610/stateful-and-stateless-streaming-processing
