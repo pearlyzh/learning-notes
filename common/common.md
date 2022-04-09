@@ -70,6 +70,7 @@
 		- https://stackoverflow.com/questions/4358732/is-incrementing-a-field-in-mysql-atomic
 		- https://dev.mysql.com/doc/refman/8.0/en/innodb-buffer-pool.html
 		- https://stackoverflow.com/a/10164697/6085492
+		- Locking: https://dev.mysql.com/doc/refman/8.0/en/innodb-locking.html
 	- How to figure out if mysql index fits entirely in memory? https://stackoverflow.com/questions/11748629/how-to-figure-out-if-mysql-index-fits-entirely-in-memory
 	- B-tree vs B+-tree
 		- https://stackoverflow.com/questions/870218/what-are-the-differences-between-b-trees-and-b-trees
@@ -348,6 +349,8 @@
 		- Go through many of hops that encrypted-decrypted (and in contrary) data in many layers
 
 ## Operating System
+- Linux vs Windows:
+	- https://www.quora.com/Is-Linux-really-better-than-Windows-in-terms-of-system-architecture/answer/Chris-Johnson-1107
 - OS Family tree: https://i.imgur.com/EpT5Pwf.png
 - Is a platform
 - Common concepts:
