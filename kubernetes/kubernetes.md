@@ -30,6 +30,7 @@
     - But **container image layers are read-only**. When a container is run, a new writable layer is created on top of the layers in the image.
     - We can’t containerize an application built for the x86 architecture and expect it to run on an ARM-based machine because it also runs Docker. We still need a VM for that.
  - It doesn't need a base image of an OS: https://stackoverflow.com/a/59539587
+ - Flashback Docker: https://www.youtube.com/watch?v=3c-iBn73dDE
 
 ## K8s from the bird's view
 - Kubernetes enables you to run your software applications on thousands of computer
