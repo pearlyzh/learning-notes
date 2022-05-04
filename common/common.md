@@ -33,6 +33,7 @@
 		- Preparation of financial statements: The information recorded in a single-entry system isn’t adequate for financial reporting or preparing profit and loss statements. Bigger organizations rely on these reports to track their performance, so they need the extra information captured by double-entry accounting.
 
 ## Database
+- Stop using Venn: https://towardsdatascience.com/you-should-use-this-to-visualize-sql-joins-instead-of-venn-diagrams-ede15f9583fc
 - Session vs Connection: https://dba.stackexchange.com/questions/13698/what-is-the-difference-between-a-connection-and-a-session#:~:text=Connection%20represents%20connection%20to%20the,or%20more%20then%20one%20session.
 - Transaction:
 	- ACID
@@ -614,6 +615,10 @@ first virtual node encountered on the ring
 	- We are used to thinking of ordering by time which is a total order - every pair of events can be placed in some order. In contrast, causal ordering is only a partial order - sometimes events happen with no possible causal relationship i.e. not (A -> B or B -> A).
 
 
+## Regex
+- https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285
+- https://towardsdatascience.com/easiest-way-to-remember-regular-expressions-regex-178ba518bebd
+- https://regexr.com/
 
 ## Architecture
 - Service mesh
