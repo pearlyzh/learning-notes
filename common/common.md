@@ -171,6 +171,7 @@
 		- http://web.mit.edu/6.005/www/fa15/
 	- Gargabe Collector:
 		- Memory Leak
+		- https://stackoverflow.com/a/18350729/6085492
 	- Framework:
 		- Spring:
 			- How it works internally:
@@ -424,6 +425,7 @@
 - Sequential vs Random IO: https://stackoverflow.com/questions/2100584/difference-between-sequential-write-and-random-write
 
 ## Distributed Things
+ - https://www.cl.cam.ac.uk/teaching/2122/ConcDisSys/dist-sys-notes.pdf
  - Generating an increamental global unique Id: https://edward-huang.com/distributed-system/programming/architecture/system-thinking/2021/01/07/how-do-you-generate-an-incremental-global-unique-in-a-distributed-system/
  - Lectures for Distributed system: https://www.youtube.com/watch?v=OKHIdpOAxto&list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB&index=10
 - FAQ:
