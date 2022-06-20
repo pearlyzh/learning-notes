@@ -49,7 +49,7 @@
 			- Snapshot Isolation and Repeatable Read: 
 				- Non-repeatable read or Read Skew (e.g. To Alice it now appears as though she only has a total of $900 in her accounts—it seems that $100 has vanished into thin air).
 				- Implement: Multiversion concurency control
-				- When a transaction is started, it is given a unique, always-increasingvii transaction ID (txid). Whenever a transaction writes anything to the database, the data it writes is tagged with the transaction ID of the writer.
+				- When a transaction is started, it is given a unique, always-increasing transaction ID (txid). Whenever a transaction writes anything to the database, the data it writes is tagged with the transaction ID of the writer.
 			- Preventing Lost updates:
 				- SELECT * FROM figures WHERE name = 'robot' AND game_id = 222 FOR UPDATE;
 				- Usual approach which can cause Lost updates: Read-Modify-Write cycle
@@ -79,6 +79,7 @@
 		- https://towardsdatascience.com/why-we-need-indexes-for-database-tables-25198145a8ca
 		- https://www.quora.com/-What-are-the-differences-between-B+Tree-and-B-Tree
 		- https://dba.stackexchange.com/questions/204561/does-mysql-use-b-tree-btree-or-both
+		- https://blog.jcole.us/2014/04/16/the-basics-of-the-innodb-undo-logging-and-history-system/
 		- Branching factor: The number of references to child pages in one page of the B-tree
 		- Preferable in many relational databases, transaction isolation is implemented using locks on ranges of keys, and in a B-tree index, those locks can be directly attached to the tree
 		- This structure mimics the underlying hardware: Disks are also arranged in terms of blocks.
@@ -89,7 +90,7 @@
 			- https://www.informit.com/articles/article.aspx?p=377652&seqNum=2
 - Cassandra:
 	- Is Column family, not column oriented:
-		- https://stackoverflow.com/questions/13010225/why-many-refer-to-cassandra-as-a-column-oriented-database
+		- https://stackoverflow.com/questio ns/13010225/why-many-refer-to-cassandra-as-a-column-oriented-database
 		- https://www.quora.com/How-is-Cassandra-a-columnar-database
 	- Column-based vs row-based:
 		- https://dataschool.com/data-modeling-101/row-vs-column-oriented-databases/
@@ -666,6 +667,11 @@ first virtual node encountered on the ring
 
 
 ## Experience
+- Webgame anti cheating:
+	- https://gamedev.stackexchange.com/questions/453/what-are-some-ways-to-prevent-or-reduce-cheating-in-online-multiplayer-games
+	- https://www.quora.com/What-are-ways-to-prevent-players-from-cheating-when-playing-online-games
+- Hiring: 
+	- https://jacobian.org/2020/sep/14/measuring-hiring-manager-effectiveness/
 - Build a startup:
 	- https://medium.com/dreamwod-tech/how-i-built-my-tech-startup-as-a-solo-developer-45390f460002
 - Data processing:

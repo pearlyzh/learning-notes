@@ -39,3 +39,6 @@ https://www.baeldung.com/java-reactive-systems
 https://carta.com/blog/equity-101-stock-option-basics/
 https://towardsdatascience.com/microservice-architecture-and-its-10-most-important-design-patterns-824952d7fa41
 https://medium.com/javarevisited/spring-never-rollback-readonly-transactions-ffc21958b0d0
+https://www.educative.io/edpresso/what-is-the-workdir-command-in-docker
+https://www.confluent.io/blog/apache-kafka-samza-and-the-unix-philosophy-of-distributed-data/?utm_campaign=Grokking%20Newsletter&utm_medium=email&utm_source=Revue%20newsletter
+http://www.cs.umd.edu/~abadi/papers/abadi-pacelc.pdf?utm_campaign=Grokking%20Newsletter&utm_medium=email&utm_source=Revue%20newsletter
