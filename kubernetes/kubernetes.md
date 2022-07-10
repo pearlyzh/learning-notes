@@ -1,5 +1,8 @@
 # Kubernetes
 
+## Ref
+ - https://towardsdatascience.com/a-beginner-friendly-introduction-to-kubernetes-540b5d63b3d7
+
 ## DevOps and NoOps
 - Ideally, you want the developers to deploy applications themselves without knowing anything about the hardware infrastructure and without dealing with the ops team. This is referred to as NoOps
 
@@ -152,6 +155,11 @@ pods and rescheduling them when nodes failed. It is a Kubernetes resource that e
     - Kubernetes assigns an IP address to a pod after the pod has been scheduled to a node and before it’s started
     - Horizontal scaling means multiple pods may provide the same service
 - Exposes multiple HTTP services through a single Ingress (consuming a single IP)
+- ClusterIP: ClusterIP is a Kubernetes service type that is used to group pods together and provide a single interface to access them.
+- NodePort: When we create a NodePort service, the service is assigned a high port on all nodes. When a request comes in for node:port, it will act as a built-in load balancer and send the request to one of the pods at random. NodePort is a Kubernetes service type that listens on a port on the node and forward requests on that port to a pod on the node
+- LoadBalancer
+- https://www.cortex.io/post/understanding-kubernetes-services-ingress-networking
+- Unlike NodePort or LoadBalancer, Ingress is not actually a type of service. Instead, it is an entry point that sits in front of multiple services in the cluster. It can be defined as a collection of routing rules that govern how external users access services running inside a Kubernetes cluster.
 
 
 ### Volumes

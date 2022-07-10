@@ -42,3 +42,5 @@ https://medium.com/javarevisited/spring-never-rollback-readonly-transactions-ffc
 https://www.educative.io/edpresso/what-is-the-workdir-command-in-docker
 https://www.confluent.io/blog/apache-kafka-samza-and-the-unix-philosophy-of-distributed-data/?utm_campaign=Grokking%20Newsletter&utm_medium=email&utm_source=Revue%20newsletter
 http://www.cs.umd.edu/~abadi/papers/abadi-pacelc.pdf?utm_campaign=Grokking%20Newsletter&utm_medium=email&utm_source=Revue%20newsletter
+
+https://www.linkedin.com/feed/update/urn:li:activity:6944834323216744448/

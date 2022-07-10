@@ -125,6 +125,7 @@
 
 ## Caching
 - Redis:
+	- For data updates, why don't we first update the database, then delete the key from the cache?
 	- Redis as a database:
 		- https://medium.com/wix-engineering/redis-as-a-database-f9df579b09c0
 	- Distributed locking:
@@ -142,7 +143,7 @@
 |         |  often grows downward, commonly accessed via "push" and "pop" (but can be
 |         |  accessed randomly, as well; disassemble a program to see)
 +---------+
-| shared  |  mapped shared libraries (C libraries, math libs, etc.)
+| shared  |  mapped shared libraries (C libraries, math libs, etc.) Please view at: https://www.youtube.com/watch?v=qlH4-oHnBb8
 |  libs   |
 +---------+
 |  hole   |  unused memory allocated between the heap and stack "chunks", spans the
@@ -371,6 +372,9 @@
 		- The hardware context switching mechanism (called Hardware Task Switching in the CPU manuals) can be used to change all of the CPU's state except for the FPU/MMX and SSE state. To use the hardware mechanism you need to tell the CPU where to save the existing CPU state, and where to load the new CPU state. The CPU state is always stored in a special data structure called a TSS (Task State Segment).
 	- Driver
 	- In Unix, that interface is a file (or, more precisely, a file descriptor). A file is just an ordered sequence of bytes. Because that is such a simple interface, many different things can be represented using the same interface: an actual file on the filesystem, a communication channel to another process
+	- Cache line: 64-byte chunk of memory that is exchanged between main memory and the caching system.
+	- False sharing: Core 0 accesses (A) and Core 1 accesses (A+1), (A) and (A+1) is in the same cache line. Then core 0 changes A -> invalidate (A+1) cache line in Core 1.
+	- Hyper-threading: is a process by which a CPU divides up its physical cores into virtual cores that are treated as if they are actually physical cores by the operating system.
 	- File system:
 		- Linux: Everything is a file, actually, a stream of bytes: https://unix.stackexchange.com/questions/225537/everything-is-a-file#:~:text=The%20%22Everything%20is%20a%20file%22%20phrase%20defines%20the%20architecture%20of,filesystem%20layer%20in%20the%20kernel.&text=In%20linux%20there%20are%207%20file%20types:
 		- https://www.howtogeek.com/117939/htg-explains-what-everything-is-a-file-means-on-linux/
@@ -488,8 +492,7 @@
 	- Consistent Hashing:
 		- To determine which server a key is stored on, we go clockwise from the key position on the ring until a server is found
 		- With virtual nodes, each server is responsible for multiple partitions
-		- To find which server a key is stored on, we go clockwise from the key’s location and find the
-first virtual node encountered on the ring
+		- To find which server a key is stored on, we go clockwise from the key’s location and find the first virtual node encountered on the ring
 		- As the number of virtual nodes increases, the distribution of keys becomes more balanced. This is because the standard deviation gets smaller with more virtual nodes, leading to balanced data distribution
 - Stateless vs stateful:
 	- Cross-origin resource sharing (CORS): https://www.codecademy.com/articles/what-is-cors
@@ -667,6 +670,8 @@ first virtual node encountered on the ring
 
 
 ## Experience
+- Great resources:
+	- https://knowledge.grokking.org/Topics/Database+Systems
 - Webgame anti cheating:
 	- https://gamedev.stackexchange.com/questions/453/what-are-some-ways-to-prevent-or-reduce-cheating-in-online-multiplayer-games
 	- https://www.quora.com/What-are-ways-to-prevent-players-from-cheating-when-playing-online-games
