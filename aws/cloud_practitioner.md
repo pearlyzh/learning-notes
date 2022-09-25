@@ -80,4 +80,75 @@ https://us-east-1.console.aws.amazon.com/billing/home?region=us-east-1#/preferen
 ### Turning on MFA
 Multi-factor authentication (MFA) in AWS is a simple best practice that adds an extra layer of protection on top of your user name and password.
 
-### Burning Platform
+
+---
+# AWS certified Solution architecture
+## Amazon Simple Storage Service (Amazon S3) and Amazon Glacier Storage
+### S3 ### 
+- provides developers and IT teams with secure, durable cloud storage.
+- highly-scalable easy-to-use **object storage** with a simple web service interface that you can use to store and retrieve any amount of data from anywhere on the web.
+- serves as one of the foundational web services—nearly any application running in AWS uses Amazon S3, either directly or indirectly, can be used alone or in conjunction with other AWS services, and it offers a very high level of integration with many other AWS cloud services.
+   - serves as the durable target storage for Amazon Kinesis and Amazon
+   Elastic MapReduce (Amazon EMR)
+   - used as the storage for Amazon Elastic Block Store (Amazon EBS) and Amazon Relational Database Service (Amazon RDS) snapshots
+   - used as a data staging or loading storage mechanism for Amazon Redshift and Amazon DynamoDB.
+
+**Use cases**
+- Backup and archive for on-premises or cloud data
+- Content, media, and software storage and distribution
+- Big data analytics
+- Static website hosting
+- Cloud-native mobile and Internet application hosting
+- Disaster recovery
+
+**Classes**
+- general purpose
+- infrequent access
+- archive
+- RRS or Amazon Glacier
+
+**Lifecycle policies**
+You can have your data automatically migrate to the most appropriate
+storage class, without modifying your application code. In order to control who has access to your data, Amazon S3 provides a rich set of permissions, access controls, and encryption options.
+
+**Structure**
+Each Amazon S3 object contains both data and metadata. Objects reside in containers called **buckets**, and each object is identified by a unique user-specified key (filename). Buckets are a
+simple flat folder with no file system hierarchy. That is, you can have multiple **buckets**, but you can't have a sub-bucket within a bucket. Each bucket can hold an unlimited number of objects.
+
+It is easy to think of an Amazon S3 object (or the data portion of an object) as a file, and the key as the filename. However, keep in mind that Amazon S3 is not a traditional file system and differs in significant ways.  
+ - you GET an object or PUT an object, operating on the whole object at once, instead of incrementally updating portions of the object as you would with a file. 
+ - You can't "mount" a bucket, "open" an object, install an operating system on Amazon S3, or run a database on it.
+ - a single bucket can store an unlimited number of files
+ - **Automatically replicated on multiple devices in multiple facilities within a region**
+- **Automatically partitions buckets to support very high request rates and simultaneous access by many clients**
+
+### Glacier ###
+- is another cloud storage service related to Amazon S3, but optimized for data archiving and long-term backup at extremely low cost. 
+- is suitable for "cold data" which is data that is rarely accessed and for which a retrieval time of three to five hours is acceptable.
+- can be used both as a storage class of Amazon S3, and as an independent archival storage service
+
+```
+Object Storage versus Traditional Block and File Storage
+ - Block storage operates at a lower level — the raw storage device level — and manages data as a set of numbered, fixed-size blocks.
+ - File storage operates at a higher level — the operating system level — and manages data as a named hierarchy of files and folders.
+
+Block and file storage are often accessed over a network in the form of a Storage Area Network (SAN) for block storage, using protocols such as iSCSI or Fibre Channel, or as a Network Attached Storage (NAS) file server or "filer" for file storage, using protocols such as Common Internet File System (CIFS) or Network File System (NFS)
+
+Object storage is something quite different, Amazon S3 is cloud object storage.
+Instead of being closely associated with a server, Amazon S3 storage is independent of a server and is accessed over the Internet. Instead of managing data as blocks or files using SCSI, CIFS, or NFS protocols, data is managed as objects using an Application Program Interface (API) built on standard HTTP verbs
+```
+
+**Internals**
+
+*Budget*
+- Every Amazon S3 object is contained in a bucket. 
+- Buckets form the top-level namespace for Amazon S3, and bucket names are global
+- Bucket Name must be unique across all AWS accounts, much like Domain Name System (DNS) domain names, not just within your own account.
+
+
+*Region*
+- each Amazon S3 bucket is created in a specific region
+- can create and use buckets that are located close to a particular set of end users or customers in order to minimize latency, or located in a particular region to satisfy data locality and sovereignty concerns, or located far away from your primary facilities in order to satisfy disaster recovery and compliance needs.
+
+
+### Amazon Glacier ###

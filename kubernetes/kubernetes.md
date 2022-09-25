@@ -15,6 +15,7 @@
         - https://www.tothenew.com/blog/cgroups-and-namespaces-on-ubuntu/
         - The first one, Linux Namespaces, makes sure each process sees its own personal view of the system (files, processes, network interfaces, hostname, and so on). 
         - The second one is Linux Control Groups (**cgroups**), which limit the amount of resources the process can consume (CPU, memory, network bandwidth, and so on).
+        - For Windows server: we have https://docs.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/hyperv-container
 ### Isolate Resource with Linux Namespace
 - https://www.tothenew.com/blog/cgroups-and-namespaces-on-ubuntu/
 - By default, each Linux system initially has one single namespace. 
@@ -36,10 +37,7 @@
  - Flashback Docker: https://www.youtube.com/watch?v=3c-iBn73dDE
 
 ## K8s from the bird's view
-- Kubernetes enables you to run your software applications on thousands of computer
-nodes as if all those nodes were a single, enormous computer. It abstracts away
-the underlying infrastructure and, by doing so, simplifies development, deployment,
-and management for both development and the operations teams.
+- Kubernetes enables you to run your software applications on thousands of computer nodes as if all those nodes were a single, enormous computer. It abstracts away the underlying infrastructure and, by doing so, simplifies development, deployment, and management for both development and the operations teams.
 - Help developer focus on the core app features
 - Help ops teams achieve better resource utilization
     - Simplifying application deployment
@@ -154,12 +152,13 @@ pods and rescheduling them when nodes failed. It is a Kubernetes resource that e
     - Pods are ephemeral
     - Kubernetes assigns an IP address to a pod after the pod has been scheduled to a node and before it’s started
     - Horizontal scaling means multiple pods may provide the same service
-- Exposes multiple HTTP services through a single Ingress (consuming a single IP)
+- Exposes multiple HTTP services through a single **Ingress** (consuming a single IP)
 - ClusterIP: ClusterIP is a Kubernetes service type that is used to group pods together and provide a single interface to access them.
 - NodePort: When we create a NodePort service, the service is assigned a high port on all nodes. When a request comes in for node:port, it will act as a built-in load balancer and send the request to one of the pods at random. NodePort is a Kubernetes service type that listens on a port on the node and forward requests on that port to a pod on the node
 - LoadBalancer
 - https://www.cortex.io/post/understanding-kubernetes-services-ingress-networking
 - Unlike NodePort or LoadBalancer, Ingress is not actually a type of service. Instead, it is an entry point that sits in front of multiple services in the cluster. It can be defined as a collection of routing rules that govern how external users access services running inside a Kubernetes cluster.
+- An **Ingress** is used when we have multiple services on our cluster and we want the user request routed to the service based on their path. Consider an example, I have two services foo and bar in our cluster. When we type www.example.com/foo we should be routed to the foo service and www.example.com/bar should be routed to bar service. These routings will be performed by an Ingress.
 
 
 ### Volumes

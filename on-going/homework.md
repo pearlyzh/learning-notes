@@ -1,10 +1,4 @@
-Coding Skills
-- https://www.hackerrank.com/challenges/full-score/problem?h_r=next-challenge&h_v=zen
 
-Video
-- Mechabical Sympathy: https://www.youtube.com/watch?v=Qho1QNbXBso
-https://www.youtube.com/watch?v=DKJ0w30M0vg
-- Netty: https://www.youtube.com/watch?v=DKJ0w30M0vg
 
 Course
 - System design: https://coursehunters.online/t/educative-io-design-gurus-grokking-the-system-design-interview-part-1/579
@@ -44,3 +38,13 @@ https://www.confluent.io/blog/apache-kafka-samza-and-the-unix-philosophy-of-dist
 http://www.cs.umd.edu/~abadi/papers/abadi-pacelc.pdf?utm_campaign=Grokking%20Newsletter&utm_medium=email&utm_source=Revue%20newsletter
 
 https://www.linkedin.com/feed/update/urn:li:activity:6944834323216744448/
+
+https://www.alibabacloud.com/blog/detailed-explanation-of-guava-ratelimiters-throttling-mechanism_594820#comment
+
+
+
+
+
+
+
+https://addyosmani.com/blog/software-engineering-soft-parts/

@@ -65,6 +65,10 @@
 	- Lost updates: Two clients concurrently perform a read-modify-write cycle. One overwrites the other’s write without incorporating its changes, so data is lost. Some implementations of snapshot isolation prevent this anomaly automatically, while others require a manual lock (SELECT FOR UPDATE).
 	- Write skew: A transaction reads something, makes a decision based on the value it saw, and writes the decision to the database. However, by the time the write is made, the premise of the decision is no longer true. Only serializable isolation prevents this anomaly.
 - MySQL:
+	- JDBC ResultSet:
+		- https://stackoverflow.com/questions/5157476/resultset-behavior-with-mysql-database-does-it-store-all-rows-in-memory
+		- http://benjchristensen.com/2008/05/27/mysql-jdbc-memory-usage-on-large-resultset/
+	- For oracle: 
 	- So based on 2 tests, I have some conclusions for MariaDB/MySQL at REPEATABLE isolation level: When using just select statement, phantom read doesn’t happen as SQL standard mentioned.
 	- https://qxf2.com/blog/mysql-architecture-and-layers/
 	- InnoDB: 
@@ -251,11 +255,12 @@
 	- Atacking:
 		- XSS:
 			- https://portswigger.net/web-security/cross-site-scripting#:~:text=How%20does%20XSS%20work%3F,their%20interaction%20with%20the%20application.
-			- Reflected cross-site scripting: https://insecure-website.com/status?message=<script>/*+Bad+stuff+here...+*/</script>
+			- Reflected cross-site scripting: https://insecure-website.com/status?message=`<script>/*+Bad+stuff+here...+*/</script>`
 			- 
 		- XSS vs CSRF:
 			- https://medium.com/@l4mp1/difference-between-xss-and-csrf-attacks-ff29e5abcd33
 			- XSS executes a malicious script in your browser, CSRF sends a malicious request on your behalf (for example, you logged into your fb account and your cookies has the your fb token, then you click on a strange link and realize that you have just liked the porn fucking page on fb)
+			- https://nodeployfriday.com/posts/cors-cyber-attacks/
 - TCP:
 	- https://www.youtube.com/watch?v=794V9oc3ZmI
 	- https://betterprogramming.pub/introduction-to-tcp-connection-establishment-for-software-developers-233878c5143d
@@ -294,6 +299,9 @@
 	- https://stackoverflow.com/a/9329173/6085492
 - TCP vs UDP:
 	- Message oriented vs stream oriented: https://stackoverflow.com/questions/17446491/tcp-stream-vs-udp-message
+- 8.8.8.8:
+	- https://serverfault.com/a/388228
+	- Anycast:
 
 ## Communication
 - Restful standard
@@ -325,6 +333,8 @@
 	- https://www.toptal.com/big-data/consistent-hashing#:~:text=Consistent%20Hashing%20is%20a%20distributed,without%20affecting%20the%20overall%20system.
 - Encoding vs Serializing:
 	- https://stackoverflow.com/questions/3784143/what-is-the-difference-between-serializing-and-encoding
+	- UTF-8 vs UTF-16 vs UTF-32:
+		- https://stackoverflow.com/a/496361/6085492
 - Non Blocking
 	- Callback
 	- Event loop
@@ -333,7 +343,7 @@
 	- Netty:
 		- https://ayedo.github.io/netty/2013/06/19/what-is-netty.html
 		http://webcache.googleusercontent.com/search?q=cache:http://seeallhearall.blogspot.com/2012/05/netty-tutorial-part-1-introduction-to.html
-- "Zero-copy": "Zero-copy" describes computer operations in which the CPU does not perform the task of copying data from one memory area to another. This is frequently used to save CPU cycles and memory bandwidth when transmitting a file over a network.[1]
+- "Zero-copy": "Zero-copy" describes computer operations in which the CPU does not perform the task of copying data from one memory area to another. This is frequently used to save CPU cycles and memory bandwidth when transmitting a file over a network.
 	- https://en.wikipedia.org/wiki/Zero-copy
 - Concurrency:
 	- https://nikgrozev.com/2015/07/14/overview-of-modern-concurrency-and-parallelism-concepts/
@@ -393,6 +403,7 @@
 	- Mechanisms (create, schedule, open, write, allocate)
 	- Policies (LRU, EDF).
 	- State machine replication
+- ABI: https://stackoverflow.com/questions/2171177/what-is-an-application-binary-interface-abi
 - OS kernel vs User kernel
 - Interupt Signals: http://faculty.salina.k-state.edu/tim/ossg/Introduction/OSworking.html
 - Thread vs Proccess:
@@ -619,6 +630,8 @@
 - Broadcast ordering:
 - Ordering: https://scattered-thoughts.net/writing/causal-ordering/#:~:text=A%20%2D%3E%20B%20(event%20A,causally%20ordered%20before%20event%20B)&text=We%20are%20used%20to%20thinking,or%20B%20%2D%3E%20A).
 	- We are used to thinking of ordering by time which is a total order - every pair of events can be placed in some order. In contrast, causal ordering is only a partial order - sometimes events happen with no possible causal relationship i.e. not (A -> B or B -> A).
+- Elastic search:
+	- https://towardsdatascience.com/elasticsearch-introduction-to-key-concepts-928816046440
 
 
 ## Regex
@@ -642,7 +655,8 @@
 - Product:
 	- https://www.interaction-design.org/literature/article/minimum-viable-product-mvp-and-design-balancing-risk-to-gain-reward#:~:text=The%20simplest%20definition%20is%20that,of%20the%20value%20back).%E2%80%9D
 - Kafka:
-	- Compare with RabbitMQ: 
+	- Compare with RabbitMQ (and other JMS implentations): 
+		- https://www.kai-waehner.de/blog/2022/05/12/comparison-jms-api-message-broker-mq-vs-apache-kafka/
 		- https://betterprogramming.pub/rabbitmq-vs-kafka-1779b5b70c41
 		- https://tarunbatra.com/blog/comparison/How-to-choose-between-Kafka-and-RabbitMQ/
 	- https://data-flair.training/blogs/kafka-architecture/
@@ -655,6 +669,7 @@
 		- https://rohithsankepally.github.io/Kafka-Storage-Internals/
 	- https://stackoverflow.com/questions/46546489/how-does-kafka-consumer-auto-commit-work
 - Another perfect one: https://medium.com/better-programming/thorough-introduction-to-apache-kafka-6fbf2989bbc1
+- Group coordinator vs Consumer leader: https://stackoverflow.com/questions/42015158/what-is-the-difference-in-kafka-between-a-consumer-group-coordinator-and-a-consu
 - Container and Orchestration
 	- Docker:
 		- Since all Linux distributions run the same (yup, it's a bit simplified) Linux kernel and differ only in userland software, it's pretty easy to simulate a different distribution environment - by just installing that userland software and pretending it's another distribution. Being specific, installing CentOS container inside Ubuntu OS will mean that you will get the userland from CentOS, while still running the same kernel, not even another kernel instance. https://serverfault.com/a/755616
@@ -670,6 +685,7 @@
 
 
 ## Experience
+- Tips to reduce technical debts: https://betterprogramming.pub/tips-to-reduce-technical-debt-f9b7d1646967
 - Great resources:
 	- https://knowledge.grokking.org/Topics/Database+Systems
 - Webgame anti cheating:
@@ -697,6 +713,10 @@
 - Principles:
 	- SOLID: https://medium.com/nerd-for-tech/solid-principles-in-java-5cf926e44247
 	- Duck Typing:  what the object can actually do, rather than what the object is. It's BAD
+- Rate limtter:
+	- https://betterprogramming.pub/4-rate-limit-algorithms-every-developer-should-know-7472cb482f48
+- Profiling:
+	- https://engineering.razorpay.com/golang-consuming-all-your-resources-5730cac4b61
 - Life:
 	- https://medium.com/kaizen-habits/6-better-things-to-do-after-6-p-m-thatll-enrich-your-life-6cf56f37618b
 	- https://medium.com/@_michaellin/how-to-be-a-10x-engineer-fdac2a5a1bd5
@@ -752,3 +772,5 @@
 	- A lot of the complexity of breaking complex systems lies tha data. After extracting the microservice you need to understand what part of the old database this system uses.
 	- There has to be a willingness to change as an organization if you want to make the most out of using microservices
 	- https://blog.pragmaticengineer.com/distributed-architecture-concepts-i-have-learned-while-building-payments-systems/
+	- Discord is using Cassandra: https://discord.com/blog/how-discord-stores-billions-of-messages
+	- Lost architecture: https://levelup.gitconnected.com/the-lost-art-of-architecting-part-1-305c5d628a91
