@@ -246,7 +246,8 @@
 		- https://security.stackexchange.com/questions/211/how-to-securely-hash-passwords
 	- Ways:
 		- Integrity
-		- Authentication
+		- Authentication:
+			- Coarse-grained vs Fine-grained: https://blog.plainid.com/coarse-grained-and-fine-grained-authorization
 		- Non-reputation
 		- Asymhttps://www.cloudflare.com/learning/ssl/what-is-asymmetric-encryption/
 	- TLS:
