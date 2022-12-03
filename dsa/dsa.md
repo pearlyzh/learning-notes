@@ -58,3 +58,6 @@
 
 ### Tree level traversal
 For a fuIl binary tree, if parent node has position = i, then left-child's position = 2i and right-child's position = 2i + 1
+
+### FP
+https://qr.ae/pvd0we

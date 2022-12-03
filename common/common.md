@@ -139,6 +139,7 @@
 	- Unsafe at any speed:
 		- https://towardsdatascience.com/redis-unsafe-at-any-speed-f2731f738a25
 ## Language
+- JIT Compiler: https://www.youtube.com/watch?v=d7KHAVaX_Rs
 - Declararive vs Imperative padigram:
 	- https://stackoverflow.com/a/1784687/6085492
 - Java:
@@ -194,6 +195,8 @@
 			- Filter vs Interceptor: https://www.baeldung.com/spring-mvc-handlerinterceptor-vs-filter
 			- Servlet Container:
 				- https://stackoverflow.com/questions/3106452/how-do-servlets-work-instantiation-sessions-shared-variables-and-multithreadi
+			- Spring sevlet:
+				- https://stackoverflow.com/questions/2769467/what-is-dispatcher-servlet-in-spring
 			- Design pattern:
 				- https://www.baeldung.com/spring-framework-design-patterns
 				- Memento: 
@@ -439,6 +442,7 @@
 		- https://en.wikipedia.org/wiki/MESI_protocol
 - RAM
 - I/O Device
+	- https://qr.ae/pv6hdk
 - Sequential vs Random IO: https://stackoverflow.com/questions/2100584/difference-between-sequential-write-and-random-write
 
 ## Distributed Things
