@@ -92,6 +92,8 @@
 		- Optimizer:
 			- https://dev.mysql.com/doc/internals/en/optimizer-primary-optimizations.html
 			- https://www.informit.com/articles/article.aspx?p=377652&seqNum=2
+		- High level:
+			- https://medium.com/@bb8s/mysql-from-5000ft-above-to-inner-details-i-6a81186064de
 - Cassandra:
 	- Is Column family, not column oriented:
 		- https://stackoverflow.com/questio ns/13010225/why-many-refer-to-cassandra-as-a-column-oriented-database
@@ -142,6 +144,7 @@
 - JIT Compiler: https://www.youtube.com/watch?v=d7KHAVaX_Rs
 - Declararive vs Imperative padigram:
 	- https://stackoverflow.com/a/1784687/6085492
+- Stack and Heap grow on opposite directions: https://stackoverflow.com/questions/4560720/why-does-the-stack-address-grow-towards-decreasing-memory-addresses
 - Java:
 - +---------+
 |  stack  |  function-local variables, return addresses, return values, etc.
