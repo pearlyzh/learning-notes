@@ -167,7 +167,8 @@
 +---------+
 |  text   |  program code, this is the actual executable code that is running.
 +---------+
-	- https://stackoverflow.com/a/5162649/6085492
+	- Source: https://stackoverflow.com/a/5162649/6085492
+  - How debugs work in Java (JDWP): https://foojay.io/today/a-short-primer-on-java-debugging-internals/
 	- Volatile:
 		- https://stackoverflow.com/questions/12438464/volatile-variables-and-other-variables
 		- Baeldung
