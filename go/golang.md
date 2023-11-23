@@ -6,13 +6,20 @@
 - M:N Scheduling Model
 - Is a divergence language 
 
+## Memory management
+- https://appliedgo.com/blog/how-to-do-escape-analysis
+
 ## Goroutine
 - https://medium.com/@riteeksrivastava/a-complete-journey-with-goroutines-8472630c7f5c
 - https://wwws.ardanlabs.com/blog/2018/08/scheduling-in-go-part1.html
 - https://wwws.ardanlabs.com/blog/2018/08/scheduling-in-go-part2.html
 - https://raksyll.osrg/scheduler/
+- Beautiful ideas:
+	- https://www.youtube.com/watch?v=YHRO5WQGh0k
+- https://medium.com/a-journey-with-go/go-goroutine-os-thread-and-cpu-management-2f5a5eaf518a
+- https://betterprogramming.pub/deep-dive-into-concurrency-of-go-93002344d37b
 
-### Compare tso Green Thread
+### Compare to Green Thread
 - https://sofstwareengineering.stackexchange.com/questions/222642/are-go-langs-goroutine-pools-just-sgreen-threads
 
 ## Pass by Value
@@ -44,6 +51,9 @@ func main() {
 ## Goroutines are Coroutines
 - https://stackoverflow.com/questions/37469995/goroutines-are-cooperatively-scheduled-does-that-mean-that-goroutines-that-don
 
+## Tips:
+- Addressable: https://stackoverflow.com/a/30745101/6085492
+- Make vs New: https://stackoverflow.com/questions/9320862/why-would-i-make-or-new
 
 # Go Journey
 ## Build

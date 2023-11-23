@@ -2,6 +2,7 @@
 
 ## Ref
  - https://towardsdatascience.com/a-beginner-friendly-introduction-to-kubernetes-540b5d63b3d7
+ - https://home.robusta.dev/blog/kubernetes-memory-limit
 
 ## DevOps and NoOps
 - Ideally, you want the developers to deploy applications themselves without knowing anything about the hardware infrastructure and without dealing with the ops team. This is referred to as NoOps

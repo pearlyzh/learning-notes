@@ -43,8 +43,7 @@ https://www.alibabacloud.com/blog/detailed-explanation-of-guava-ratelimiters-thr
 
 
 
-
-
-
-
 https://addyosmani.com/blog/software-engineering-soft-parts/
+https://stockwin.vn/phan-tich-ky-thuat-chung-khoan-phan-1-cac-dang-do-thi-gia-thong-dung/#:~:text=Bi%E1%BB%83u%20%C4%91%E1%BB%93%20thanh%20c%C5%A9ng%20%C4%91%C6%B0%E1%BB%A3c,nh%E1%BA%A5t%20trong%20kho%E1%BA%A3ng%20th%E1%BB%9Di%20gian.
+https://medium.com/@egorponomarev/virtual-threads-in-spring-boot-with-java-19-ea98e1725058
+https://medium.com/aayushs-tech-blog/how-discord-evolved-from-storing-millions-of-messages-to-trillions-meanwhile-reducing-p99-read-847e62859c97

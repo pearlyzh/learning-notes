@@ -10,9 +10,11 @@
 - Hyperloglog
 - Count min sketch
 - Bloom filter
+- Skip list:
+    - https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/skiplists.pdf
 ## Disruptor
 - Ring buffer
-- Mechabical Sympathy: 
+- Mechanical Sympathy: 
     - https://www.youtube.com/watch?v=Qho1QNbXBso
     - If you want performance, don's share cache line
 - Key concepts:
