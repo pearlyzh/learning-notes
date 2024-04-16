@@ -9,7 +9,8 @@
 ## Probabilistic
 - Hyperloglog
 - Count min sketch
-- Bloom filter
+- Bloom filter: 
+    - https://towardsdatascience.com/system-design-bloom-filter-a2e19dcd4810
 - Skip list:
     - https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/skiplists.pdf
 ## Disruptor

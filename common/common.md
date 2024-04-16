@@ -10,7 +10,7 @@
 			- What it should do, such as allowing data to be stored, retrieved, searched, and processed in various ways.
 		- Non-functional requirement:
 			- General properties like security, reliability, compliance, scalability, compatibility, and maintainability.
-	- Data intensive Application:
+	- Data-intensive Application:
 		- Reliability:
 			- Making systems work correctly, even when faults occur.
 		- Scalability:
@@ -169,6 +169,8 @@
 +---------+
 	- Source: https://stackoverflow.com/a/5162649/6085492
   - How debugs work in Java (JDWP): https://foojay.io/today/a-short-primer-on-java-debugging-internals/
+  - CompletableFuture Threadpool: https://stackoverflow.com/questions/62929715/java-completablefuture-threadpool-used
+  - Threads are spawned in parallelStream in Java 8? 
 	- Volatile:
 		- https://stackoverflow.com/questions/12438464/volatile-variables-and-other-variables
 		- Baeldung
@@ -504,7 +506,7 @@
 		- The situation gets more complicated if secondary indexes are involved. A secondary index usually doesn't identify the record uniquely. They don't map neatly to partitions.
 	- Strategies for rebalancing:
 		- How not to do it: Hash mod n. The problem with mod N is that if the number of nodes N changes, most of the keys will need to be moved from one node to another.
-		- Fixed number of partitions: Create many more partitions than there are nodes and assign several partitions to each node. If a node is added to the cluster, we can steal a few partitions from every existing node until partitions are fairly distributed once again. The number of partitions does not change, nor does the assignment of keys to partitions. The only thing that change is the assignment of partitions to nodes. This is used in Riak, Elasticsearch, Couchbase, and Voldemport. You need to choose a high enough number of partitions to accomodate future growth. Neither too big or too small.
+		- Fixed number of partitions: Create many more partitions than there are nodes and assign several partitions to each node. If a node is added to the cluster, we can steal a few partitions from every existing node until partitions are fairly distributed once again. The number of partitions does not change, nor does the assignment of keys to partitions. The only thing that change is the assignment of partitions to nodes. This is used in Riak, Elasticsearch, Couchbase, and Voldemport. You need to choose a high enough number of partitions to accomodate `future` growth. Neither too big or too small.
 		- Dynamic partitioning. The number of partitions adapts to the total data volume. An empty database starts with an empty partition. While the dataset is small, all writes have to processed by a single node while the others nodes sit idle. HBase and MongoDB allow an initial set of partitions to be configured (pre-splitting).
 		- Partitioning proportionally to nodes. Cassandra and Ketama make the number of partitions proportional to the number of nodes. Have a fixed number of partitions per node. This approach also keeps the size of each partition fairly stable.
 	- Request routing:
@@ -694,6 +696,10 @@
 
 
 ## Experience
+- Estimations: https://medium.com/@techworldwithmilan/all-estimations-are-wrong-but-none-are-useful-2550586d35e6
+- Google did mistakes on platforming: 
+	- https://qr.ae/ps1dxE
+	- https://gist.github.com/chitchcock/1281611
 - Tips to reduce technical debts: https://betterprogramming.pub/tips-to-reduce-technical-debt-f9b7d1646967
 - Great resources:
 	- https://knowledge.grokking.org/Topics/Database+Systems

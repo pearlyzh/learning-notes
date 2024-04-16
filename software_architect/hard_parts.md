@@ -4,6 +4,9 @@
  - architects may also want to validate the macro structure of the architecture as well as the micro, for example, when designing a layered architecture: https://www.archunit.org/userguide/html/000_Index.html#_asserting_architectural_constraints
  - While most fitness functions should be automated and run continually, some will necessarily be manual. A manual fitness function requires a person to handle the validation
 
+# Coupling versus Cohesion
+ - https://itnext.io/complexity-coupling-and-cohesion-a74db76c968d
+
 ## Colloquial definitions
  - Service: A service is a cohesive collection of functionality deployed as an independent executable 
  - Coupling: Two artifacts (including services) are coupled if a change in one might require a change in the other to maintain proper functionality
