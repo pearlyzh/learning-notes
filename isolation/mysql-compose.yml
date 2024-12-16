@@ -1,0 +1,14 @@
+version: '2'
+services:
+  mysql:
+    container_name: pearly_mysql
+    restart: always
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 'pearly'
+      MYSQL_USER: 'test'
+      MYSQL_PASS: 'abc@123456'
+    ports:
+      - "3306:3306"
+    volumes:
+      - /Users/pearly/Work/Research/devops/docker/mysql-persistence:/var/lib/mysql
