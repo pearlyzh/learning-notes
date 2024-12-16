@@ -102,6 +102,11 @@
 		- https://dataschool.com/data-modeling-101/row-vs-column-oriented-databases/
 	- Hinted handoff:
 		- By analogy, if you lock yourself out of your house, you knock on the neighbor’s door and ask whether you may stay on their couch temporarily.
+	- Vnodes:
+		- Token ranges: https://stackoverflow.com/a/37982696/6085492
+	- Sharing and Replication:
+		- https://stackoverflow.com/a/41590463/6085492
+		- https://stackoverflow.com/a/67619564/6085492
 - TiDB:
 	- TiKV FAQ: https://tikv.org/docs/4.0/reference/faq/#:~:text=What%20is%20the%20relationship%20between,transactions%20of%20a%20relational%20database (ToRead)
 	- TiKV
@@ -118,7 +123,7 @@
 			- Constructing:
 				- When a write comes in, add it to an in-memory balanced tree data structure (for example, a red-black tree). This in-memory tree is sometimes called a mem-table.
 		- https://yetanotherdevblog.com/lsm/
-		- Compaction: https://docs.datastax.com/en/cassandra-oss/2.1/cassandra/dml/dml_write_path_c.html#:~:text=the%20write%20path.-,Cassandra%20processes%20data%20at%20several%20stages%20on%20the%20write%20path,Flushing%20data%20from%20the%20memtable
+		- Compaction: https://docs.datastax.com/en/cassandra-oss/2.1/cassandra/dml/dml_write_path_c.html
 	- Log-structured storage engine:
 		- Are a comparatively recent development. Their key idea is that they systematically turn random-access writes into sequential writes on disk, which enables higher write throughput due to the performance characteristics of hard drives and SSDs
 - OLTP:
@@ -140,6 +145,14 @@
 	- RedLock Algorithm
 	- Unsafe at any speed:
 		- https://towardsdatascience.com/redis-unsafe-at-any-speed-f2731f738a25
+- Startegies: 
+	- Cache-aside: 
+		- ZLP is using, many downsides.
+		- https://medium.com/javarevisited/interview-do-you-know-how-many-cache-read-write-modes-are-there-d884ccac7c87
+		- https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside
+	- Many commercial caching systems provide: https://redis.io/solutions/caching/
+		- read-through and write-through: synchronously.
+		- write-behind operations: asynchrounously.
 ## Language
 - JIT Compiler: https://www.youtube.com/watch?v=d7KHAVaX_Rs
 - Declararive vs Imperative padigram:
@@ -235,6 +248,7 @@
 	- Entity vs POJO vs DTO vs JavaBean:
 		- https://www.reddit.com/r/learnjava/comments/b2h3pm/differences_between_java_bean_entity_class_dao/
 	- Modern Java: 
+		- Why do Java objects have to be a multiple of 8? https://stackoverflow.com/q/11926415/6085492
 		- Tricky questions: https://levelup.gitconnected.com/tricky-java-interview-questions-cfc546fd03ab
 		- https://french-tech-lead.medium.com/the-weirdest-java-interview-questions-that-you-ever-heard-of-2ec8b24be8ff
 		- https://marian-caikovski.medium.com/java-17-language-compared-to-java-8-how-modern-java-is-better-than-java-8-65a4e39c448e
@@ -340,7 +354,7 @@
 ## Mechanism
 - Consistent Hashing:
 	- https://itnext.io/introducing-consistent-hashing-9a289769052e
-	- https://www.toptal.com/big-data/consistent-hashing#:~:text=Consistent%20Hashing%20is%20a%20distributed,without%20affecting%20the%20overall%20system.
+	- https://www.toptal.com/big-data/consistent-hashing
 - Encoding vs Serializing:
 	- https://stackoverflow.com/questions/3784143/what-is-the-difference-between-serializing-and-encoding
 	- UTF-8 vs UTF-16 vs UTF-32:
@@ -666,6 +680,7 @@
 - Product:
 	- https://www.interaction-design.org/literature/article/minimum-viable-product-mvp-and-design-balancing-risk-to-gain-reward#:~:text=The%20simplest%20definition%20is%20that,of%20the%20value%20back).%E2%80%9D
 - Kafka:
+	- Common Configurations: https://medium.com/@jorgesnz/kafka-consumer-deep-dive-120129079fde
 	- Compare with RabbitMQ (and other JMS implentations): 
 		- https://www.kai-waehner.de/blog/2022/05/12/comparison-jms-api-message-broker-mq-vs-apache-kafka/
 		- https://betterprogramming.pub/rabbitmq-vs-kafka-1779b5b70c41
