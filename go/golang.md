@@ -54,8 +54,11 @@ func main() {
 ## Tips:
 - Addressable: https://stackoverflow.com/a/30745101/6085492
 - Make vs New: https://stackoverflow.com/questions/9320862/why-would-i-make-or-new
+- Errors are Values: https://go.dev/blog/errors-are-values
+- Go Structs: 7 Advanced Techniques for Efficient Code: https://blog.stackademic.com/mastering-go-structs-7-advanced-techniques-for-efficient-code-fe71f3b56613
 
 # Go Journey
 ## Build
 - `go mod download` vs `go mod tidy`: go mod download is downloading all of the modules in the dependency graph, which it can determine from reading only the go.mod files. It doesn't know which of those modules are actually needed to satisfy a build, so it doesn't pull in the checksums for those modules (because they may not be relevant). go mod tidy has to walk the package graph in order to ensure that all imports are satisfied. So it knows, for a fact, without doing any extra work, that the modules it walks through are needed for a go build in some configuration.
 - `google.golang.org/protobuf/cmd/protoc-gen-go` vs `google.golang.org/grpc/cmd/protoc-gen-go-grpc`: 
+
