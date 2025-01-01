@@ -712,6 +712,7 @@
 
 ## Experience
 - Estimations: https://medium.com/@techworldwithmilan/all-estimations-are-wrong-but-none-are-useful-2550586d35e6
+- On Launching versus Landing: https://carloarg02.medium.com/on-launching-versus-landing-da8db611e02f
 - Google did mistakes on platforming: 
 	- https://qr.ae/ps1dxE
 	- https://gist.github.com/chitchcock/1281611
